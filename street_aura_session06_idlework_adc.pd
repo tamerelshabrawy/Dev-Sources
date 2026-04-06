@@ -453,7 +453,7 @@
 #X connect 167 0 164 0;
 #X obj 1450 730 r aiGrain;
 #X obj 1450 753 clip 2 15;
-#X obj 1450 776 expr max(15, 200/max(1,$f1));
+#X obj 1450 776 expr max(15 \, 200/max(1 \, $f1));
 #X obj 1530 730 r aiStretch;
 #X obj 1530 753 expr (100-$f1)/75;
 #X obj 1530 776 t f f;
