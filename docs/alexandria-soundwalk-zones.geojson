@@ -1,0 +1,1224 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Alexandria Soundwalk Route",
+        "total_zones": 35,
+        "total_tracks": 4,
+        "approx_distance_m": 1709
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            29.9042702,
+            31.1971939
+          ],
+          [
+            29.9042697,
+            31.1971939
+          ],
+          [
+            29.9041345,
+            31.1974428
+          ],
+          [
+            29.903924,
+            31.1976572
+          ],
+          [
+            29.9037191,
+            31.197871
+          ],
+          [
+            29.9035805,
+            31.1980146
+          ],
+          [
+            29.9034668,
+            31.1981114
+          ],
+          [
+            29.9032732,
+            31.1982327
+          ],
+          [
+            29.9030305,
+            31.1984446
+          ],
+          [
+            29.9029072,
+            31.1985722
+          ],
+          [
+            29.902781,
+            31.1987394
+          ],
+          [
+            29.9026791,
+            31.1988579
+          ],
+          [
+            29.9025586,
+            31.1989869
+          ],
+          [
+            29.9022687,
+            31.1992511
+          ],
+          [
+            29.9019591,
+            31.1995458
+          ],
+          [
+            29.9019591,
+            31.1995458
+          ],
+          [
+            29.9015999,
+            31.1998636
+          ],
+          [
+            29.9013854,
+            31.2000587
+          ],
+          [
+            29.9011287,
+            31.200284
+          ],
+          [
+            29.9008607,
+            31.2005171
+          ],
+          [
+            29.900595,
+            31.2007425
+          ],
+          [
+            29.9003518,
+            31.2009563
+          ],
+          [
+            29.8996133,
+            31.2010997
+          ],
+          [
+            29.8995806,
+            31.201405
+          ],
+          [
+            29.8992918,
+            31.2012976
+          ],
+          [
+            29.8988268,
+            31.2011214
+          ],
+          [
+            29.8985785,
+            31.2010352
+          ],
+          [
+            29.8988634,
+            31.2004477
+          ],
+          [
+            29.899022,
+            31.2001435
+          ],
+          [
+            29.8991065,
+            31.1999369
+          ],
+          [
+            29.8993131,
+            31.1997794
+          ],
+          [
+            29.8995214,
+            31.199621
+          ],
+          [
+            29.9000878,
+            31.1984075
+          ],
+          [
+            29.9002448,
+            31.1980737
+          ],
+          [
+            29.9003473,
+            31.1978637
+          ],
+          [
+            29.9004363,
+            31.1976696
+          ],
+          [
+            29.9005354,
+            31.197452
+          ],
+          [
+            29.900729,
+            31.197033
+          ],
+          [
+            29.9008214,
+            31.1968278
+          ],
+          [
+            29.9009196,
+            31.1966127
+          ],
+          [
+            29.9009838,
+            31.1964567
+          ],
+          [
+            29.9010204,
+            31.1963777
+          ],
+          [
+            29.9010739,
+            31.1962588
+          ],
+          [
+            29.9011093,
+            31.1961634
+          ],
+          [
+            29.90116,
+            31.1960329
+          ],
+          [
+            29.9026919,
+            31.1965935
+          ],
+          [
+            29.9030252,
+            31.1967192
+          ],
+          [
+            29.9032994,
+            31.1968217
+          ],
+          [
+            29.9035612,
+            31.1969195
+          ],
+          [
+            29.9038177,
+            31.1970196
+          ],
+          [
+            29.9040266,
+            31.1970967
+          ],
+          [
+            29.9042715,
+            31.1971886
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Track 1",
+        "color": "#0e7c7b",
+        "arc_start_pct": 0,
+        "arc_end_pct": 9.3
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            29.9042702,
+            31.1971939
+          ],
+          [
+            29.9042697,
+            31.1971939
+          ],
+          [
+            29.9041345,
+            31.1974428
+          ],
+          [
+            29.903924,
+            31.1976572
+          ],
+          [
+            29.9037191,
+            31.197871
+          ],
+          [
+            29.9035805,
+            31.1980146
+          ],
+          [
+            29.9034668,
+            31.1981114
+          ],
+          [
+            29.9032732,
+            31.1982327
+          ],
+          [
+            29.90320900061454,
+            31.198288752121048
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Transition (7–10)",
+        "color": "#f4a261",
+        "arc_start_pct": 9.3,
+        "arc_end_pct": 14.4
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            29.90320900061454,
+            31.198288752121048
+          ],
+          [
+            29.9030305,
+            31.1984446
+          ],
+          [
+            29.9029072,
+            31.1985722
+          ],
+          [
+            29.902781,
+            31.1987394
+          ],
+          [
+            29.9026791,
+            31.1988579
+          ],
+          [
+            29.90263407797484,
+            31.19890609785266
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Track 2",
+        "color": "#e63946",
+        "arc_start_pct": 14.4,
+        "arc_end_pct": 37.2
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            29.90263407797484,
+            31.19890609785266
+          ],
+          [
+            29.9025586,
+            31.1989869
+          ],
+          [
+            29.9022687,
+            31.1992511
+          ],
+          [
+            29.9019591,
+            31.1995458
+          ],
+          [
+            29.9019591,
+            31.1995458
+          ],
+          [
+            29.9015999,
+            31.1998636
+          ],
+          [
+            29.9013854,
+            31.2000587
+          ],
+          [
+            29.9011287,
+            31.200284
+          ],
+          [
+            29.9008607,
+            31.2005171
+          ],
+          [
+            29.900595,
+            31.2007425
+          ],
+          [
+            29.9003518,
+            31.2009563
+          ],
+          [
+            29.899650991243963,
+            31.20109238121275
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Transition (26–27)",
+        "color": "#f4a261",
+        "arc_start_pct": 37.2,
+        "arc_end_pct": 40
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            29.899650991243963,
+            31.20109238121275
+          ],
+          [
+            29.8996133,
+            31.2010997
+          ],
+          [
+            29.8995806,
+            31.201405
+          ],
+          [
+            29.899468971545826,
+            31.201363487202293
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Track 3",
+        "color": "#457b9d",
+        "arc_start_pct": 40,
+        "arc_end_pct": 57.1
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            29.899468971545826,
+            31.201363487202293
+          ],
+          [
+            29.8992918,
+            31.2012976
+          ],
+          [
+            29.8988268,
+            31.2011214
+          ],
+          [
+            29.8985785,
+            31.2010352
+          ],
+          [
+            29.8988634,
+            31.2004477
+          ],
+          [
+            29.899022,
+            31.2001435
+          ],
+          [
+            29.8991065,
+            31.1999369
+          ],
+          [
+            29.8993131,
+            31.1997794
+          ],
+          [
+            29.8995214,
+            31.199621
+          ],
+          [
+            29.89958365581502,
+            31.1994876182353
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Track 4",
+        "color": "#7b2d8e",
+        "arc_start_pct": 57.1,
+        "arc_end_pct": 100
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            29.89958365581502,
+            31.1994876182353
+          ],
+          [
+            29.9000878,
+            31.1984075
+          ],
+          [
+            29.9002448,
+            31.1980737
+          ],
+          [
+            29.9003473,
+            31.1978637
+          ],
+          [
+            29.9004363,
+            31.1976696
+          ],
+          [
+            29.9005354,
+            31.197452
+          ],
+          [
+            29.900729,
+            31.197033
+          ],
+          [
+            29.9008214,
+            31.1968278
+          ],
+          [
+            29.9009196,
+            31.1966127
+          ],
+          [
+            29.9009838,
+            31.1964567
+          ],
+          [
+            29.9010204,
+            31.1963777
+          ],
+          [
+            29.9010739,
+            31.1962588
+          ],
+          [
+            29.9011093,
+            31.1961634
+          ],
+          [
+            29.90116,
+            31.1960329
+          ],
+          [
+            29.9026919,
+            31.1965935
+          ],
+          [
+            29.9030252,
+            31.1967192
+          ],
+          [
+            29.9032994,
+            31.1968217
+          ],
+          [
+            29.9035612,
+            31.1969195
+          ],
+          [
+            29.9038177,
+            31.1970196
+          ],
+          [
+            29.9040266,
+            31.1970967
+          ],
+          [
+            29.9042715,
+            31.1971886
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": 1,
+        "track": "Track 1",
+        "family": 0,
+        "color": "#0e7c7b",
+        "arc_start_pct": 0,
+        "arc_end_pct": 1.55,
+        "arc_mid_pct": 0.775
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.90420856620757,
+          31.197306445864914
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": 2,
+        "track": "Track 1",
+        "family": 0,
+        "color": "#0e7c7b",
+        "arc_start_pct": 1.55,
+        "arc_end_pct": 3.1,
+        "arc_mid_pct": 2.325
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.90406305145609,
+          31.197515572293653
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": 3,
+        "track": "Track 1",
+        "family": 0,
+        "color": "#0e7c7b",
+        "arc_start_pct": 3.1,
+        "arc_end_pct": 4.65,
+        "arc_mid_pct": 3.875
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.903883400195628,
+          31.19769956329026
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": 4,
+        "track": "Track 1",
+        "family": 0,
+        "color": "#0e7c7b",
+        "arc_start_pct": 4.65,
+        "arc_end_pct": 6.2,
+        "arc_mid_pct": 5.425
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.903705418920765,
+          31.197885174624663
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": 5,
+        "track": "Track 1",
+        "family": 0,
+        "color": "#0e7c7b",
+        "arc_start_pct": 6.2,
+        "arc_end_pct": 7.75,
+        "arc_mid_pct": 6.975
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.903521657911963,
+          31.19806469599052
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": 6,
+        "track": "Transition",
+        "family": 1,
+        "color": "#f4a261",
+        "arc_start_pct": 7.75,
+        "arc_end_pct": 9.3,
+        "arc_mid_pct": 8.525
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.90330993695669,
+          31.198209682474964
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": 7,
+        "track": "Transition",
+        "family": 1,
+        "color": "#f4a261",
+        "arc_start_pct": 9.3,
+        "arc_end_pct": 10.58,
+        "arc_mid_pct": 9.94
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.903129016273372,
+          31.198358585997827
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": 8,
+        "track": "Transition",
+        "family": 1,
+        "color": "#f4a261",
+        "arc_start_pct": 10.58,
+        "arc_end_pct": 11.85,
+        "arc_mid_pct": 11.215
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.902974388357254,
+          31.198502668496467
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": 9,
+        "track": "Transition",
+        "family": 1,
+        "color": "#f4a261",
+        "arc_start_pct": 11.85,
+        "arc_end_pct": 13.13,
+        "arc_mid_pct": 12.49
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.90283801478514,
+          31.19866386218641
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": 10,
+        "track": "Transition",
+        "family": 1,
+        "color": "#f4a261",
+        "arc_start_pct": 13.13,
+        "arc_end_pct": 14.4,
+        "arc_mid_pct": 13.765
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.902704786394025,
+          31.198828029168872
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": 11,
+        "track": "Track 2",
+        "family": 2,
+        "color": "#e63946",
+        "arc_start_pct": 14.4,
+        "arc_end_pct": 15.92,
+        "arc_mid_pct": 15.16
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.90254713027741,
+          31.198997352917242
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": 12,
+        "track": "Track 2",
+        "family": 2,
+        "color": "#e63946",
+        "arc_start_pct": 15.92,
+        "arc_end_pct": 17.44,
+        "arc_mid_pct": 16.68
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.90236074304295,
+          31.199167216688696
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": 13,
+        "track": "Track 2",
+        "family": 2,
+        "color": "#e63946",
+        "arc_start_pct": 17.44,
+        "arc_end_pct": 18.96,
+        "arc_mid_pct": 18.2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.902176243357022,
+          31.199339107017718
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": 14,
+        "track": "Track 2",
+        "family": 2,
+        "color": "#e63946",
+        "arc_start_pct": 18.96,
+        "arc_end_pct": 20.48,
+        "arc_mid_pct": 19.72
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.901993585180442,
+          31.19951297447456
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": 15,
+        "track": "Track 2",
+        "family": 3,
+        "color": "#e63946",
+        "arc_start_pct": 20.48,
+        "arc_end_pct": 22,
+        "arc_mid_pct": 21.24
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.901805889047445,
+          31.199681352451897
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": 16,
+        "track": "Track 2",
+        "family": 3,
+        "color": "#e63946",
+        "arc_start_pct": 22,
+        "arc_end_pct": 23.52,
+        "arc_mid_pct": 22.76
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.901617020400963,
+          31.199848452830107
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": 17,
+        "track": "Track 2",
+        "family": 3,
+        "color": "#e63946",
+        "arc_start_pct": 23.52,
+        "arc_end_pct": 25.04,
+        "arc_mid_pct": 24.28
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.901430256998527,
+          31.200017899998077
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": 18,
+        "track": "Track 2",
+        "family": 3,
+        "color": "#e63946",
+        "arc_start_pct": 25.04,
+        "arc_end_pct": 26.56,
+        "arc_mid_pct": 25.8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.901241441364032,
+          31.200185049359888
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": 19,
+        "track": "Track 2",
+        "family": 3,
+        "color": "#e63946",
+        "arc_start_pct": 26.56,
+        "arc_end_pct": 28.08,
+        "arc_mid_pct": 27.32
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.901051608370324,
+          31.2003510524585
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": 20,
+        "track": "Track 2",
+        "family": 4,
+        "color": "#e63946",
+        "arc_start_pct": 28.08,
+        "arc_end_pct": 29.6,
+        "arc_mid_pct": 28.84
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.90086133309376,
+          31.200516549350162
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": 21,
+        "track": "Track 2",
+        "family": 4,
+        "color": "#e63946",
+        "arc_start_pct": 29.6,
+        "arc_end_pct": 31.12,
+        "arc_mid_pct": 30.36
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.900669036427,
+          31.20067969303483
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": 22,
+        "track": "Track 2",
+        "family": 4,
+        "color": "#e63946",
+        "arc_start_pct": 31.12,
+        "arc_end_pct": 32.64,
+        "arc_mid_pct": 31.88
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.90047852042014,
+          31.20084489857802
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": 23,
+        "track": "Track 2",
+        "family": 4,
+        "color": "#e63946",
+        "arc_start_pct": 32.64,
+        "arc_end_pct": 34.16,
+        "arc_mid_pct": 33.4
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.900269877474894,
+          31.20097220750183
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": 24,
+        "track": "Track 2",
+        "family": 4,
+        "color": "#e63946",
+        "arc_start_pct": 34.16,
+        "arc_end_pct": 35.68,
+        "arc_mid_pct": 34.92
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.900022322982522,
+          31.2010202769862
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": 25,
+        "track": "Transition",
+        "family": 5,
+        "color": "#f4a261",
+        "arc_start_pct": 35.68,
+        "arc_end_pct": 37.2,
+        "arc_mid_pct": 36.44
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.89977476849015,
+          31.201068346470567
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": 26,
+        "track": "Transition",
+        "family": 5,
+        "color": "#f4a261",
+        "arc_start_pct": 37.2,
+        "arc_end_pct": 38.6,
+        "arc_mid_pct": 37.9
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.89960502084919,
+          31.20117699739273
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": 27,
+        "track": "Transition",
+        "family": 5,
+        "color": "#f4a261",
+        "arc_start_pct": 38.6,
+        "arc_end_pct": 40,
+        "arc_mid_pct": 39.3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.899577823017864,
+          31.20140396728573
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": 28,
+        "track": "Track 3",
+        "family": 6,
+        "color": "#457b9d",
+        "arc_start_pct": 40,
+        "arc_end_pct": 44.28,
+        "arc_mid_pct": 42.14
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.899136557118656,
+          31.20123877463292
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": 29,
+        "track": "Track 3",
+        "family": 6,
+        "color": "#457b9d",
+        "arc_start_pct": 44.28,
+        "arc_end_pct": 48.55,
+        "arc_mid_pct": 46.415
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.898628750734026,
+          31.20093157660147
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": 30,
+        "track": "Track 3",
+        "family": 6,
+        "color": "#457b9d",
+        "arc_start_pct": 48.55,
+        "arc_end_pct": 52.83,
+        "arc_mid_pct": 50.69
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.898942676981566,
+          31.200295644150113
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": 31,
+        "track": "Track 3",
+        "family": 6,
+        "color": "#457b9d",
+        "arc_start_pct": 52.83,
+        "arc_end_pct": 57.1,
+        "arc_mid_pct": 54.965
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.89935661707259,
+          31.199746307804617
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": 32,
+        "track": "Track 4",
+        "family": 7,
+        "color": "#7b2d8e",
+        "arc_start_pct": 57.1,
+        "arc_end_pct": 67.82,
+        "arc_mid_pct": 62.46
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.89995976562809,
+          31.198681810929223
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": 33,
+        "track": "Track 4",
+        "family": 7,
+        "color": "#7b2d8e",
+        "arc_start_pct": 67.82,
+        "arc_end_pct": 78.55,
+        "arc_mid_pct": 73.185
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.900712168560645,
+          31.19706942754695
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": 34,
+        "track": "Track 4",
+        "family": 7,
+        "color": "#7b2d8e",
+        "arc_start_pct": 78.55,
+        "arc_end_pct": 89.27,
+        "arc_mid_pct": 83.91
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.901770243053733,
+          31.196256218921548
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone": 35,
+        "track": "Track 4",
+        "family": 7,
+        "color": "#7b2d8e",
+        "arc_start_pct": 89.27,
+        "arc_end_pct": 100,
+        "arc_mid_pct": 94.635
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.90343895102751,
+          31.196873831743662
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,5013 @@
+  [34mInitializing pd4web[0m
+  [32mChecking emsdk[0m
+  [32mChecking pure-data[0m
+  [32mInitializing paths[0m
+  [32mInstalling emsdk, this can take a LONG some time.[0m
+  [32m/Users/bsarya/.local/pipx/venvs/pd4web/lib/python3.14/site-packages/pd4web/Pd4Web/emsdk/emsdk install 5.0.0 [0m
+Resolving SDK version '5.0.0' to 'sdk-releases-e44d3cc557d78155966478aa2bd8dec657609619-64bit'
+Installing SDK 'sdk-releases-e44d3cc557d78155966478aa2bd8dec657609619-64bit'..
+Skipped installing node-22.16.0-64bit, already installed.
+Skipped installing python-3.13.3-64bit, already installed.
+Skipped installing releases-e44d3cc557d78155966478aa2bd8dec657609619-64bit, already installed.
+All SDK components already installed: 'sdk-releases-e44d3cc557d78155966478aa2bd8dec657609619-64bit'.
+  [32m[0m
+    [32mChecking emscripten paths[0m
+  [34mPd4Web initialized successfully[0m
+  [34mProject name is: 'pd4web_main_scenes_adc'[0m
+  [32mOutput folder is [0m
+    [32mListing PureData Objects[0m
+
+  [34mProcessing Patch 'pd4web_main_scenes_adc.pd'[0m
+    [32mFound declare path Libs[0m
+    [32mFound declare path Audios[0m
+    [32mFound declare path Extras[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'metro'[0m
+  [32mProcessing object 'i'[0m
+  [32mProcessing object '+'[0m
+  [32mReplacing floatatom by pdlua floatatom[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mReplacing floatatom by pdlua floatatom[0m
+  [32mProcessing object 'send'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'value'[0m
+  [32mProcessing object 'catch~'[0m
+  [32mProcessing object 'plate.rev~'[0m
+    [32mFound abstractions in library 'else'[0m
+
+    [34mProcessing clone SubPatch 'plate.rev~.pd[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'float2sig~'[0m
+      [32mFound abstractions in library 'else'[0m
+
+      [34mProcessing clone SubPatch 'float2sig~.pd[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'order'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'order' via prefix lib: else/order;[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'args'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'args' via prefix lib: else/args;[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'outlet'[0m
+  [32mProcessing object 'default'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'default' via prefix lib: else/default[0m
+  [32mProcessing object 'change'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'order'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'order' via prefix lib: else/order;[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'clone'[0m
+
+      [34mProcessing clone SubPatch 'else/float2sig.unit.pd'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object 'delay'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'routeall'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'routeall' via prefix lib: else/routeall[0m
+  [32mProcessing object 'loadbang'[0m
+      [32mEditing external/abstraction object: 'else/routeall' -> 'routeall'[0m
+      [32mCreating modified version of float2sig.unit.pd[0m
+      [32mEditing external/abstraction object: 'else/order;' -> 'order;'[0m
+      [32mEditing external/abstraction object: 'else/args;' -> 'args;'[0m
+      [32mEditing external/abstraction object: 'else/default' -> 'default'[0m
+      [32mEditing external/abstraction object: 'else/order;' -> 'order;'[0m
+  [32mEditing clone object from 'clone'[0m
+      [32m  clone arg: 'else/float2sig.unit,' -> 'float2sig.unit,'[0m
+      [32mCreating modified version of float2sig~.pd[0m
+  [32mProcessing object 'xfade~'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'xfade~' via prefix lib: else/xfade~[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'delread~'[0m
+  [32mProcessing object 'delread~'[0m
+  [32mProcessing object 'delwrite~'[0m
+  [32mProcessing object 'delwrite~'[0m
+  [32mProcessing object 'delread~'[0m
+  [32mProcessing object 'delread~'[0m
+  [32mProcessing object 'delread~'[0m
+  [32mProcessing object 'delread~'[0m
+  [32mProcessing object 'delread~'[0m
+  [32mProcessing object 'delread~'[0m
+  [32mProcessing object 'delread~'[0m
+  [32mProcessing object 'delread~'[0m
+  [32mProcessing object 'delread~'[0m
+  [32mProcessing object 'delread~'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'delwrite~'[0m
+  [32mProcessing object 'delread~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'delread~'[0m
+  [32mProcessing object 'delread~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'delwrite~'[0m
+  [32mProcessing object 'delread~'[0m
+  [32mProcessing object 'delread~'[0m
+  [32mProcessing object 'delread~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'rpole~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'expr~'[0m
+  [32mProcessing object 'float2sig~'[0m
+      [32mFound abstractions in library 'else'[0m
+
+      [34mProcessing clone SubPatch 'float2sig~.pd[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'rpole~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'expr~'[0m
+  [32mProcessing object 'float2sig~'[0m
+      [32mFound abstractions in library 'else'[0m
+
+      [34mProcessing clone SubPatch 'float2sig~.pd[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'float2sig~'[0m
+      [32mFound abstractions in library 'else'[0m
+
+      [34mProcessing clone SubPatch 'float2sig~.pd[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'delread~'[0m
+  [32mProcessing object 'delread~'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'allpass.rev~'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'allpass.rev~' via prefix lib: else/allpass.rev~[0m
+  [32mProcessing object 'allpass.rev~'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'allpass.rev~' via prefix lib: else/allpass.rev~[0m
+  [32mProcessing object 'allpass.rev~'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'allpass.rev~' via prefix lib: else/allpass.rev~[0m
+  [32mProcessing object 'allpass.rev~'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'allpass.rev~' via prefix lib: else/allpass.rev~[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'allpass.rev~'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'allpass.rev~' via prefix lib: else/allpass.rev~[0m
+  [32mProcessing object 'rescale~'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'rescale~' via prefix lib: else/rescale~[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'allpass.rev~'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'allpass.rev~' via prefix lib: else/allpass.rev~[0m
+  [32mProcessing object 'rescale~'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'rescale~' via prefix lib: else/rescale~[0m
+  [32mProcessing object 'delwrite~'[0m
+  [32mProcessing object 'delwrite~'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'float2sig~'[0m
+      [32mFound abstractions in library 'else'[0m
+
+      [34mProcessing clone SubPatch 'float2sig~.pd[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'delwrite~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'delread4~'[0m
+  [32mProcessing object 'float2sig~'[0m
+      [32mFound abstractions in library 'else'[0m
+
+      [34mProcessing clone SubPatch 'float2sig~.pd[0m
+  [32mProcessing object 'rpole~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'expr~'[0m
+  [32mProcessing object 'float2sig~'[0m
+      [32mFound abstractions in library 'else'[0m
+
+      [34mProcessing clone SubPatch 'float2sig~.pd[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'unpack'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'args'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'args' via prefix lib: else/args;[0m
+  [32mProcessing object 'lb'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'lb' via prefix lib: else/lb;[0m
+  [32mProcessing object 'inlet~'[0m
+      [32mEditing external/abstraction object: 'else/float2sig~' -> 'float2sig~'[0m
+      [32mEditing external/abstraction object: 'else/xfade~' -> 'xfade~'[0m
+      [32mEditing external/abstraction object: 'else/float2sig~' -> 'float2sig~'[0m
+      [32mEditing external/abstraction object: 'else/float2sig~' -> 'float2sig~'[0m
+      [32mEditing external/abstraction object: 'else/float2sig~' -> 'float2sig~'[0m
+      [32mEditing external/abstraction object: 'else/allpass.rev~' -> 'allpass.rev~'[0m
+      [32mEditing external/abstraction object: 'else/allpass.rev~' -> 'allpass.rev~'[0m
+      [32mEditing external/abstraction object: 'else/allpass.rev~' -> 'allpass.rev~'[0m
+      [32mEditing external/abstraction object: 'else/allpass.rev~' -> 'allpass.rev~'[0m
+      [32mEditing external/abstraction object: 'else/allpass.rev~' -> 'allpass.rev~'[0m
+      [32mEditing external/abstraction object: 'else/rescale~' -> 'rescale~'[0m
+      [32mEditing external/abstraction object: 'else/allpass.rev~' -> 'allpass.rev~'[0m
+      [32mEditing external/abstraction object: 'else/rescale~' -> 'rescale~'[0m
+      [32mEditing external/abstraction object: 'else/float2sig~' -> 'float2sig~'[0m
+      [32mEditing external/abstraction object: 'else/float2sig~' -> 'float2sig~'[0m
+      [32mEditing external/abstraction object: 'else/float2sig~' -> 'float2sig~'[0m
+      [32mEditing external/abstraction object: 'else/args;' -> 'args;'[0m
+      [32mEditing external/abstraction object: 'else/lb;' -> 'lb;'[0m
+      [32mCreating modified version of plate.rev~.pd[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'out~'[0m
+    [32mFound abstractions in library 'else'[0m
+
+    [34mProcessing clone SubPatch 'out~.pd[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'moses'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'max'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'lb'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'lb' via prefix lib: else/lb;[0m
+  [32mProcessing object 'hsl'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'cnv'[0m
+  [32mProcessing object 'cnv'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'select'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '-'[0m
+  [32mProcessing object 'unpack'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '-'[0m
+  [32mProcessing object 'unpack'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'outlet'[0m
+  [32mProcessing object 'select'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '-'[0m
+  [32mProcessing object 'unpack'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'outlet'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '-'[0m
+  [32mProcessing object 'unpack'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'outlet'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '-'[0m
+  [32mProcessing object 'unpack'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '-'[0m
+  [32mProcessing object 'unpack'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'trigger'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'bng'[0m
+  [32mProcessing object 'lb'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'lb' via prefix lib: else/lb;[0m
+  [32mProcessing object 'value'[0m
+  [32mProcessing object 'value'[0m
+  [32mProcessing object 'value'[0m
+  [32mProcessing object 'select'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'receive'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '-'[0m
+  [32mProcessing object 'unpack'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '-'[0m
+  [32mProcessing object 'unpack'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'outlet'[0m
+  [32mProcessing object 'select'[0m
+  [32mProcessing object 'send'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'send'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'snapshot~'[0m
+  [32mProcessing object 'switch~'[0m
+  [32mProcessing object 'delay'[0m
+  [32mProcessing object 'outlet'[0m
+  [32mProcessing object 'lb'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'lb' via prefix lib: else/lb;[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'outlet'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'outlet'[0m
+  [32mProcessing object 'value'[0m
+  [32mProcessing object 'change'[0m
+  [32mProcessing object 'delay'[0m
+  [32mProcessing object 'select'[0m
+  [32mProcessing object 'value'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'select'[0m
+  [32mProcessing object 'receive'[0m
+  [32mProcessing object 'receive'[0m
+  [32mProcessing object 'outlet'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'switch~'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object 'pipe'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'dbtorms~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'switch~'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'pipe'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'switch~'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object 'pipe'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'select'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '-'[0m
+  [32mProcessing object 'unpack'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'outlet'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '-'[0m
+  [32mProcessing object 'unpack'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'outlet'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'lb'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'lb' via prefix lib: else/lb;[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 'initmess'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'initmess' via prefix lib: else/initmess[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'op~'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'op~' via prefix lib: else/op~[0m
+  [32mProcessing object 'op~'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'op~' via prefix lib: else/op~[0m
+  [32mProcessing object 'sum~'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'sum~' via prefix lib: else/sum~;[0m
+  [32mProcessing object 'sum~'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'sum~' via prefix lib: else/sum~;[0m
+  [32mProcessing object 'bitnormal~'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'bitnormal~' via prefix lib: else/bitnormal~;[0m
+  [32mProcessing object 'bitnormal~'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'bitnormal~' via prefix lib: else/bitnormal~;[0m
+  [32mProcessing object 'dac~'[0m
+  [32mProcessing object 'dac~'[0m
+      [32mEditing external/abstraction object: 'else/lb;' -> 'lb;'[0m
+      [32mEditing external/abstraction object: 'else/lb;' -> 'lb;'[0m
+      [32mEditing external/abstraction object: 'else/lb;' -> 'lb;'[0m
+      [32mEditing external/abstraction object: 'else/lb;' -> 'lb;'[0m
+      [32mEditing external/abstraction object: 'else/initmess' -> 'initmess'[0m
+      [32mEditing external/abstraction object: 'else/op~' -> 'op~'[0m
+      [32mEditing external/abstraction object: 'else/op~' -> 'op~'[0m
+      [32mEditing external/abstraction object: 'else/sum~;' -> 'sum~;'[0m
+      [32mEditing external/abstraction object: 'else/sum~;' -> 'sum~;'[0m
+      [32mEditing external/abstraction object: 'else/bitnormal~;' -> 'bitnormal~;'[0m
+      [32mEditing external/abstraction object: 'else/bitnormal~;' -> 'bitnormal~;'[0m
+      [32mCreating modified version of out~.pd[0m
+  [32mProcessing object 'bng'[0m
+  [32mProcessing object 'catch~'[0m
+  [32mProcessing object 'receive'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'change'[0m
+  [32mProcessing object 'mtof'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object 'bang'[0m
+  [32mProcessing object 'value'[0m
+  [32mProcessing object 'bng'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object 'i'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'delwrite~'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'bng'[0m
+  [32mProcessing object 'value'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object 'delread~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'spigot'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object '<'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'mtof'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'mtof'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'bng'[0m
+  [32mProcessing object 'bng'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'cos~'[0m
+  [32mProcessing object 'cos~'[0m
+  [32mProcessing object 'cos~'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object 'receive'[0m
+  [32mProcessing object 'bng'[0m
+  [32mProcessing object 'change'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'int'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'spigot'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'bng'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'tri~'[0m
+    [32mFound abstractions in library 'else'[0m
+    [32mFound external object 'tri~' via prefix lib: else/tri~[0m
+  [32mProcessing object 'phaser~'[0m
+    [32mFound abstractions in library 'else'[0m
+
+    [34mProcessing clone SubPatch 'phaser~.pd[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'xfade~'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'xfade~' via prefix lib: else/xfade~,[0m
+  [32mProcessing object 'allpass.filt~'[0m
+      [32mFound abstractions in library 'else'[0m
+
+      [34mProcessing clone SubPatch 'allpass.filt~.pd[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object '-'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'clip~'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'max~'[0m
+  [32mProcessing object 'sr~'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'sr~' via prefix lib: else/sr~;[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'select'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 'int'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'unpack'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'args'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'args' via prefix lib: else/args;[0m
+  [32mProcessing object 'loop'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'loop' via prefix lib: else/loop;[0m
+  [32mProcessing object 'default'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'default' via prefix lib: else/default[0m
+  [32mProcessing object 'lb'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'lb' via prefix lib: else/lb;[0m
+      [32mEditing external/abstraction object: 'else/sr~;' -> 'sr~;'[0m
+      [32mEditing external/abstraction object: 'else/args;' -> 'args;'[0m
+      [32mEditing external/abstraction object: 'else/loop;' -> 'loop;'[0m
+      [32mEditing external/abstraction object: 'else/default' -> 'default'[0m
+      [32mEditing external/abstraction object: 'else/lb;' -> 'lb;'[0m
+      [32mCreating modified version of allpass.filt~.pd[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'unpack'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'loadbanger'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'loadbanger' via prefix lib: else/loadbanger[0m
+  [32mProcessing object 'args'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'args' via prefix lib: else/args;[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'rescale~'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'rescale~' via prefix lib: else/rescale~[0m
+      [32mEditing external/abstraction object: 'else/xfade~,' -> 'xfade~,'[0m
+      [32mEditing external/abstraction object: 'else/allpass.filt~' -> 'allpass.filt~'[0m
+      [32mEditing external/abstraction object: 'else/loadbanger' -> 'loadbanger'[0m
+      [32mEditing external/abstraction object: 'else/args;' -> 'args;'[0m
+      [32mEditing external/abstraction object: 'else/rescale~' -> 'rescale~'[0m
+      [32mCreating modified version of phaser~.pd[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'rescale~'[0m
+    [32mFound abstractions in library 'else'[0m
+    [32mFound external object 'rescale~' via prefix lib: else/rescale~[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'fbdelay~'[0m
+    [32mFound abstractions in library 'else'[0m
+    [32mFound external object 'fbdelay~' via prefix lib: else/fbdelay~[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'poly'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'unpack'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '>'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'mtof~'[0m
+  [32mProcessing object 'cos~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object 'cos~'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'makenote'[0m
+  [32mProcessing object 'delwrite~'[0m
+  [32mProcessing object 'delread4~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'spigot'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'i'[0m
+  [32mProcessing object 'change'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '%'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'delay'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'switch~'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'metro'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'cputime'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'spigot'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '%'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'mtof~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'clip~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'dac~'[0m
+  [32mProcessing object 'dac~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'delread4~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'delwrite~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'cos~'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'array'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'del'[0m
+  [32mProcessing object 'switch~'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'mtof~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'mtof~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'tabread'[0m
+  [32mProcessing object 'bp~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object 'sin~'[0m
+    [32mFound external object 'sin~' using lib in declared libs[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object 's2f~'[0m
+    [32mFound abstractions in library 'else'[0m
+    [32mFound external object 's2f~' via prefix lib: else/s2f~;[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'unpack'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'i'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'change'[0m
+  [32mProcessing object 'bang'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'select'[0m
+  [32mProcessing object 'bng'[0m
+  [32mProcessing object 'bng'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object 'mtof~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'clip~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'noise~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object 'mtof~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object 'cos~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'i'[0m
+  [32mProcessing object '%'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'spigot'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'max'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'env~'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'change'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'soundfiler'[0m
+  [32mProcessing object 'table'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'spigot'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'i'[0m
+  [32mProcessing object 'mod'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'tabplay~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object 'clip~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'tabplay~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 'clip~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'table'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'change'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'soundfiler'[0m
+  [32mProcessing object 'table'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'bng'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'timer'[0m
+  [32mProcessing object 'max'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object 'vd~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'spigot'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'mod'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'mod'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'tabplay~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'delwrite~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 'clip~'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'change'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'soundfiler'[0m
+  [32mProcessing object 'table'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'spigot'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'mod'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'mod'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'tabplay~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'clip~'[0m
+  [32mProcessing object 'dac~'[0m
+  [32mProcessing object 'dac~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'max'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'bng'[0m
+  [32mProcessing object 'change'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'i'[0m
+  [32mProcessing object 'change'[0m
+  [32mProcessing object 'spigot'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'mod'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'mod'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'delay'[0m
+  [32mProcessing object 'delay'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'unpack'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'bng'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'line'[0m
+  [32mProcessing object 'mtof'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'bp~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'clip~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'int'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object 'cos~'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'receive'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'change'[0m
+  [32mProcessing object 'mtof'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'bng'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object 'i'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'delwrite~'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'bng'[0m
+  [32mProcessing object 'value'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object 'delread~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'spigot'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object 'cos~'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'mtof'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'mtof'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object 'bang'[0m
+  [32mProcessing object 'value'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object '<'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'max'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'i'[0m
+  [32mProcessing object 'change'[0m
+  [32mProcessing object 'spigot'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'mod'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'mod'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'max'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object '<'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'delay'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object '<'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'delay'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object 'tabread'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object 'tabread'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'mod'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'clone'[0m
+
+    [34mProcessing clone SubPatch 'chm_poly_voice.pd'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'unpack'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'mtof'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object '-'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'line'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'max'[0m
+  [32mProcessing object 'pack'[0m
+      [32mCreating modified version of chm_poly_voice.pd[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'array'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'delay'[0m
+  [32mProcessing object 'switch~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object 'tabread'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'unpack'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'mtof~'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object 'cos~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'sin~'[0m
+    [32mFound external object 'sin~' using lib in declared libs[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object '>'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object 'noise~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'array'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object '<'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'ping.pong~'[0m
+    [32mFound abstractions in library 'else'[0m
+
+    [34mProcessing clone SubPatch 'ping.pong~.pd[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'delread4~'[0m
+  [32mProcessing object 'delread4~'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'max'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 'delwrite~'[0m
+  [32mProcessing object 'delwrite~'[0m
+  [32mProcessing object 'f2s~'[0m
+      [32mFound abstractions in library 'else'[0m
+
+      [34mProcessing clone SubPatch 'f2s~.pd[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'order'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'order' via prefix lib: else/order;[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'args'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'args' via prefix lib: else/args;[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'outlet'[0m
+  [32mProcessing object 'default'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'default' via prefix lib: else/default[0m
+  [32mProcessing object 'change'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'order'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'order' via prefix lib: else/order;[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'clone'[0m
+
+      [34mProcessing clone SubPatch 'else/float2sig.unit.pd'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object 'delay'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'routeall'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'routeall' via prefix lib: else/routeall[0m
+  [32mProcessing object 'loadbang'[0m
+      [32mEditing external/abstraction object: 'else/routeall' -> 'routeall'[0m
+      [32mCreating modified version of float2sig.unit.pd[0m
+      [32mEditing external/abstraction object: 'else/order;' -> 'order;'[0m
+      [32mEditing external/abstraction object: 'else/args;' -> 'args;'[0m
+      [32mEditing external/abstraction object: 'else/default' -> 'default'[0m
+      [32mEditing external/abstraction object: 'else/order;' -> 'order;'[0m
+  [32mEditing clone object from 'clone'[0m
+      [32m  clone arg: 'else/float2sig.unit,' -> 'float2sig.unit,'[0m
+      [32mCreating modified version of f2s~.pd[0m
+  [32mProcessing object 'f2s~'[0m
+      [32mFound abstractions in library 'else'[0m
+
+      [34mProcessing clone SubPatch 'f2s~.pd[0m
+  [32mProcessing object 'f2s~'[0m
+      [32mFound abstractions in library 'else'[0m
+
+      [34mProcessing clone SubPatch 'f2s~.pd[0m
+  [32mProcessing object 'lb'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'lb' via prefix lib: else/lb;[0m
+      [32mEditing external/abstraction object: 'else/f2s~' -> 'f2s~'[0m
+      [32mEditing external/abstraction object: 'else/f2s~' -> 'f2s~'[0m
+      [32mEditing external/abstraction object: 'else/f2s~' -> 'f2s~'[0m
+      [32mEditing external/abstraction object: 'else/lb;' -> 'lb;'[0m
+      [32mCreating modified version of ping.pong~.pd[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'spigot'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'i'[0m
+  [32mProcessing object 'change'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'makenote'[0m
+  [32mProcessing object 'moses'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'bp~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'delay'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'switch~'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'catch~'[0m
+  [32mProcessing object 'catch~'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'bng'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'array'[0m
+  [32mProcessing object 'array'[0m
+  [32mProcessing object '%'[0m
+  [32mProcessing object 'tabread'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'div'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'i'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'mtof'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'mtof~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'pow~'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'clip~'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'sqrt'[0m
+  [32mProcessing object 'sqrt'[0m
+  [32mProcessing object 'rand.f'[0m
+    [32mFound abstractions in library 'else'[0m
+    [32mFound external object 'rand.f' via prefix lib: else/rand.f[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'rand.f'[0m
+    [32mFound abstractions in library 'else'[0m
+    [32mFound external object 'rand.f' via prefix lib: else/rand.f[0m
+  [32mProcessing object 'bang'[0m
+  [32mProcessing object 'sqrt'[0m
+  [32mProcessing object '-'[0m
+  [32mProcessing object 'sqrt'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'rand.f'[0m
+    [32mFound abstractions in library 'else'[0m
+    [32mFound external object 'rand.f' via prefix lib: else/rand.f[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'mtof'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'mtof~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'pow~'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'clip~'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'mtof'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'mtof~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'pow~'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'clip~'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'mtof'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'mtof~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'pow~'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'clip~'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object 'loop'[0m
+    [32mFound abstractions in library 'else'[0m
+    [32mFound external object 'loop' via prefix lib: else/loop;[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'rand.i'[0m
+    [32mFound abstractions in library 'else'[0m
+    [32mFound external object 'rand.i' via prefix lib: else/rand.i[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'pipe'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'spigot'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'mtof'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'mtof~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'pow~'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'clip~'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'sqrt'[0m
+  [32mProcessing object 'sqrt'[0m
+  [32mProcessing object 'rand.f'[0m
+    [32mFound abstractions in library 'else'[0m
+    [32mFound external object 'rand.f' via prefix lib: else/rand.f[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'rand.f'[0m
+    [32mFound abstractions in library 'else'[0m
+    [32mFound external object 'rand.f' via prefix lib: else/rand.f[0m
+  [32mProcessing object 'bang'[0m
+  [32mProcessing object 'sqrt'[0m
+  [32mProcessing object '-'[0m
+  [32mProcessing object 'sqrt'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'mtof'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'mtof~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'pow~'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'clip~'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'mtof'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'mtof~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'pow~'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'clip~'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'mtof'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'mtof~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'pow~'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'clip~'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object '%'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'rand.i'[0m
+    [32mFound abstractions in library 'else'[0m
+    [32mFound external object 'rand.i' via prefix lib: else/rand.i[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'int'[0m
+  [32mProcessing object 'change'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'array'[0m
+  [32mProcessing object 'tabread'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'harp_scale_delay~'[0m
+
+    [34mProcessing clone SubPatch 'harp_scale_delay~.pd[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'delwrite~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'delwrite~'[0m
+  [32mProcessing object 'vd~'[0m
+  [32mProcessing object 'vd~'[0m
+  [32mProcessing object 'pitch.shift~'[0m
+      [32mFound abstractions in library 'else'[0m
+
+      [34mProcessing clone SubPatch 'pitch.shift~.pd[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'delread4~'[0m
+  [32mProcessing object 'delread4~'[0m
+  [32mProcessing object 'delwrite~'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'max'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'pimp~'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'pimp~' via prefix lib: else/pimp~[0m
+  [32mProcessing object 'envelope~'[0m
+      [32mFound abstractions in library 'else'[0m
+
+      [34mProcessing clone SubPatch 'envelope~.pd[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'symbol'[0m
+  [32mProcessing object 'symbol'[0m
+  [32mProcessing object 'symbol'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'wrap'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'unpack'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'loadbanger'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'loadbanger' via prefix lib: else/loadbanger[0m
+  [32mProcessing object 'swap2'[0m
+      [32mFound abstractions in library 'else'[0m
+
+      [34mProcessing clone SubPatch 'swap2.pd[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'message'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'message' via prefix lib: else/message;[0m
+  [32mProcessing object 'trigger'[0m
+  [32mProcessing object 'outlet'[0m
+  [32mProcessing object 'outlet'[0m
+      [32mEditing external/abstraction object: 'else/message;' -> 'message;'[0m
+      [32mCreating modified version of swap2.pd[0m
+  [32mProcessing object 'args'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'args' via prefix lib: else/args[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'wrap~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'switch~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '=='[0m
+  [32mProcessing object 'tabreader~'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'tabreader~' via prefix lib: else/tabreader~;[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'switch~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '=='[0m
+  [32mProcessing object 'vsaw~'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'vsaw~' via prefix lib: else/vsaw~[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'switch~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '=='[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'tabreader~'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'tabreader~' via prefix lib: else/tabreader~[0m
+  [32mProcessing object 'rescale'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'rescale' via prefix lib: else/rescale[0m
+  [32mProcessing object 'switch~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '=='[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object 'expr~'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'v'[0m
+  [32mProcessing object 'v'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'v'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'v'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+      [32mEditing external/abstraction object: 'else/loadbanger' -> 'loadbanger'[0m
+      [32mEditing external/abstraction object: 'else/swap2;' -> 'swap2;'[0m
+      [32mEditing external/abstraction object: 'else/args' -> 'args'[0m
+      [32mEditing external/abstraction object: 'else/tabreader~;' -> 'tabreader~;'[0m
+      [32mEditing external/abstraction object: 'else/vsaw~' -> 'vsaw~'[0m
+      [32mEditing external/abstraction object: 'else/tabreader~' -> 'tabreader~'[0m
+      [32mEditing external/abstraction object: 'else/rescale' -> 'rescale'[0m
+      [32mCreating modified version of envelope~.pd[0m
+  [32mProcessing object 'f2s~'[0m
+      [32mFound abstractions in library 'else'[0m
+
+      [34mProcessing clone SubPatch 'f2s~.pd[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'order'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'order' via prefix lib: else/order;[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'args'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'args' via prefix lib: else/args;[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'outlet'[0m
+  [32mProcessing object 'default'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'default' via prefix lib: else/default[0m
+  [32mProcessing object 'change'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'order'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'order' via prefix lib: else/order;[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'clone'[0m
+
+      [34mProcessing clone SubPatch 'else/float2sig.unit.pd'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object 'delay'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'routeall'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'routeall' via prefix lib: else/routeall[0m
+  [32mProcessing object 'loadbang'[0m
+      [32mEditing external/abstraction object: 'else/routeall' -> 'routeall'[0m
+      [32mCreating modified version of float2sig.unit.pd[0m
+      [32mEditing external/abstraction object: 'else/order;' -> 'order;'[0m
+      [32mEditing external/abstraction object: 'else/args;' -> 'args;'[0m
+      [32mEditing external/abstraction object: 'else/default' -> 'default'[0m
+      [32mEditing external/abstraction object: 'else/order;' -> 'order;'[0m
+  [32mEditing clone object from 'clone'[0m
+      [32m  clone arg: 'else/float2sig.unit,' -> 'float2sig.unit,'[0m
+      [32mCreating modified version of f2s~.pd[0m
+  [32mProcessing object 'envelope~'[0m
+      [32mFound abstractions in library 'else'[0m
+
+      [34mProcessing clone SubPatch 'envelope~.pd[0m
+  [32mProcessing object 'pimp~'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'pimp~' via prefix lib: else/pimp~;[0m
+  [32mProcessing object 'cents2ratio'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'cents2ratio' via prefix lib: else/cents2ratio;[0m
+  [32mProcessing object 'initmess'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'initmess' via prefix lib: else/initmess[0m
+  [32mProcessing object 'lb'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'lb' via prefix lib: else/lb;[0m
+      [32mEditing external/abstraction object: 'else/pimp~' -> 'pimp~'[0m
+      [32mEditing external/abstraction object: 'else/envelope~;' -> 'envelope~;'[0m
+      [32mEditing external/abstraction object: 'else/f2s~' -> 'f2s~'[0m
+      [32mEditing external/abstraction object: 'else/envelope~;' -> 'envelope~;'[0m
+      [32mEditing external/abstraction object: 'else/pimp~;' -> 'pimp~;'[0m
+      [32mEditing external/abstraction object: 'else/cents2ratio;' -> 'cents2ratio;'[0m
+      [32mEditing external/abstraction object: 'else/initmess' -> 'initmess'[0m
+      [32mEditing external/abstraction object: 'else/lb;' -> 'lb;'[0m
+      [32mCreating modified version of pitch.shift~.pd[0m
+  [32mProcessing object 'pitch.shift~'[0m
+      [32mFound abstractions in library 'else'[0m
+
+      [34mProcessing clone SubPatch 'pitch.shift~.pd[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'line'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'line'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'delay'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'switch~'[0m
+      [32mEditing external/abstraction object: 'else/pitch.shift~' -> 'pitch.shift~'[0m
+      [32mEditing external/abstraction object: 'else/pitch.shift~' -> 'pitch.shift~'[0m
+      [32mCreating modified version of harp_scale_delay~.pd[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'rand.i'[0m
+    [32mFound abstractions in library 'else'[0m
+    [32mFound external object 'rand.i' via prefix lib: else/rand.i[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'send'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'noise~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'vcf~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'metro'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object '<'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object 'noise~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'vcf~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'metro'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object 'noise~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'vcf~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'expr~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'noise~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '<'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'delwrite~'[0m
+  [32mProcessing object 'delwrite~'[0m
+  [32mProcessing object 'delread~'[0m
+  [32mProcessing object 'delread~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'switch~'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'bp~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'poly'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'unpack'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '>'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'mtof~'[0m
+  [32mProcessing object 'cos~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object 'cos~'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'delwrite~'[0m
+  [32mProcessing object 'delread4~'[0m
+  [32mProcessing object 'makenote'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '%'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'spigot'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'arp2_voice'[0m
+
+    [34mProcessing clone SubPatch 'arp2_voice.pd[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'unpack'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '>'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'mtof~'[0m
+  [32mProcessing object 'cos~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'cos~'[0m
+      [32mCreating modified version of arp2_voice.pd[0m
+  [32mProcessing object 'arp2_voice'[0m
+
+    [34mProcessing clone SubPatch 'arp2_voice.pd[0m
+  [32mProcessing object 'arp2_voice'[0m
+
+    [34mProcessing clone SubPatch 'arp2_voice.pd[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'change'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'delay'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'switch~'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'bng'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'int'[0m
+  [32mProcessing object 'change'[0m
+  [32mProcessing object 'mod'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'spigot'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'mod'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'zils_fills1_2bar_shifter~'[0m
+
+    [34mProcessing clone SubPatch 'zils_fills1_2bar_shifter~.pd[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'soundfiler'[0m
+  [32mProcessing object 'samplerate~'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object 'tabread4~'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'mod'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'table'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 's'[0m
+      [32mCreating modified version of zils_fills1_2bar_shifter~.pd[0m
+  [32mProcessing object 'zils_fills2_2bar_shifter~'[0m
+
+    [34mProcessing clone SubPatch 'zils_fills2_2bar_shifter~.pd[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'soundfiler'[0m
+  [32mProcessing object 'samplerate~'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object 'tabread4~'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'mod'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'table'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 's'[0m
+      [32mCreating modified version of zils_fills2_2bar_shifter~.pd[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object 'env~'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object 'env~'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'soundfiler'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'samplerate~'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'table'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'int'[0m
+  [32mProcessing object 'change'[0m
+  [32mProcessing object 'mod'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object 'moses'[0m
+  [32mProcessing object 'spigot'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object 'tabread4~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'env~'[0m
+  [32mProcessing object '>'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object 'env~'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'zils_loop_bender~'[0m
+
+    [34mProcessing clone SubPatch 'zils_loop_bender~.pd[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'clip~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object 'env~'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object 'rmstodb'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object 'expr~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object 'expr~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object 'expr~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'delwrite~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object 'abs~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'vd~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'int'[0m
+  [32mProcessing object 'change'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'mod'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object '-'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'min'[0m
+  [32mProcessing object 'max'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object 'expr~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'line'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'line'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'mod'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object '=='[0m
+  [32mProcessing object '=='[0m
+  [32mProcessing object '=='[0m
+  [32mProcessing object '=='[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'min'[0m
+  [32mProcessing object 'max'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '+'[0m
+      [32mCreating modified version of zils_loop_bender~.pd[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'zils_loop_bender~'[0m
+
+    [34mProcessing clone SubPatch 'zils_loop_bender~.pd[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'value'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'delay'[0m
+  [32mProcessing object 'switch~'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'spigot'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '%'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object 'tabread'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'mtof~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'array'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'clip~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'del'[0m
+  [32mProcessing object 'switch~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'mtof~'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'mtof~'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '%'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'line'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'expr~'[0m
+  [32mProcessing object 'expr~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 'bp~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 'mtof~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'clip~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object 'lowpass~'[0m
+    [32mFound abstractions in library 'else'[0m
+    [32mFound external object 'lowpass~' via prefix lib: else/lowpass~[0m
+  [32mProcessing object 'rampnoise~'[0m
+    [32mFound abstractions in library 'else'[0m
+    [32mFound external object 'rampnoise~' via prefix lib: else/rampnoise~[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'unpack'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'mtof'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'mtof'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'mtof'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'mtof'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'expr~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'delwrite~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object 'vd~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'expr~'[0m
+  [32mProcessing object 'delwrite~'[0m
+  [32mProcessing object 'delread~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'f2s~'[0m
+    [32mFound abstractions in library 'else'[0m
+
+    [34mProcessing clone SubPatch 'f2s~.pd[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'order'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'order' via prefix lib: else/order;[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'args'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'args' via prefix lib: else/args;[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'outlet'[0m
+  [32mProcessing object 'default'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'default' via prefix lib: else/default[0m
+  [32mProcessing object 'change'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'order'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'order' via prefix lib: else/order;[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'clone'[0m
+
+      [34mProcessing clone SubPatch 'else/float2sig.unit.pd'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object 'delay'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'routeall'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'routeall' via prefix lib: else/routeall[0m
+  [32mProcessing object 'loadbang'[0m
+      [32mEditing external/abstraction object: 'else/routeall' -> 'routeall'[0m
+      [32mCreating modified version of float2sig.unit.pd[0m
+      [32mEditing external/abstraction object: 'else/order;' -> 'order;'[0m
+      [32mEditing external/abstraction object: 'else/args;' -> 'args;'[0m
+      [32mEditing external/abstraction object: 'else/default' -> 'default'[0m
+      [32mEditing external/abstraction object: 'else/order;' -> 'order;'[0m
+  [32mEditing clone object from 'clone'[0m
+      [32m  clone arg: 'else/float2sig.unit,' -> 'float2sig.unit,'[0m
+      [32mCreating modified version of f2s~.pd[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'delwrite~'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'vd~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'spigot'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'int'[0m
+  [32mProcessing object 'change'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'expr~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'delwrite~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'del'[0m
+  [32mProcessing object 'switch~'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'mtof'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'noise~'[0m
+  [32mProcessing object 'samphold~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'expr~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'noise~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object 'cos~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'wrap~'[0m
+  [32mProcessing object 'cos~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '-'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'clip~'[0m
+  [32mProcessing object 'vcf~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'expr~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object 'expr~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'delwrite~'[0m
+  [32mProcessing object 'vd~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object 'cos~'[0m
+  [32mProcessing object 'expr~'[0m
+  [32mProcessing object 'expr~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'dac~'[0m
+  [32mProcessing object 'dac~'[0m
+  [32mProcessing object 'expr~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'expr~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object 'cos~'[0m
+  [32mProcessing object 'sawbl~'[0m
+
+    [34mProcessing clone SubPatch 'sawbl~.pd[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object 'clip~'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'clip~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'tabread4~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'table'[0m
+      [32mCreating modified version of sawbl~.pd[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object 'cos~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'int'[0m
+  [32mProcessing object 'change'[0m
+  [32mProcessing object 'mod'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'spigot'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'chorus~'[0m
+    [32mFound abstractions in library 'else'[0m
+
+    [34mProcessing clone SubPatch 'chorus~.pd[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'unpack'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object '-'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'args'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'args' via prefix lib: else/args;[0m
+  [32mProcessing object 'lb'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'lb' via prefix lib: else/lb;[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object 'comb.rev~'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'comb.rev~' via prefix lib: else/comb.rev~[0m
+  [32mProcessing object 'f2s~'[0m
+      [32mFound abstractions in library 'else'[0m
+
+      [34mProcessing clone SubPatch 'f2s~.pd[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'order'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'order' via prefix lib: else/order;[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'args'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'args' via prefix lib: else/args;[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'outlet'[0m
+  [32mProcessing object 'default'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'default' via prefix lib: else/default[0m
+  [32mProcessing object 'change'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'order'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'order' via prefix lib: else/order;[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'clone'[0m
+
+      [34mProcessing clone SubPatch 'else/float2sig.unit.pd'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object 'delay'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'routeall'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'routeall' via prefix lib: else/routeall[0m
+  [32mProcessing object 'loadbang'[0m
+      [32mEditing external/abstraction object: 'else/routeall' -> 'routeall'[0m
+      [32mCreating modified version of float2sig.unit.pd[0m
+      [32mEditing external/abstraction object: 'else/order;' -> 'order;'[0m
+      [32mEditing external/abstraction object: 'else/args;' -> 'args;'[0m
+      [32mEditing external/abstraction object: 'else/default' -> 'default'[0m
+      [32mEditing external/abstraction object: 'else/order;' -> 'order;'[0m
+  [32mEditing clone object from 'clone'[0m
+      [32m  clone arg: 'else/float2sig.unit,' -> 'float2sig.unit,'[0m
+      [32mCreating modified version of f2s~.pd[0m
+  [32mProcessing object 'f2s~'[0m
+      [32mFound abstractions in library 'else'[0m
+
+      [34mProcessing clone SubPatch 'f2s~.pd[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+      [32mEditing external/abstraction object: 'else/args;' -> 'args;'[0m
+      [32mEditing external/abstraction object: 'else/lb;' -> 'lb;'[0m
+      [32mEditing external/abstraction object: 'else/comb.rev~' -> 'comb.rev~'[0m
+      [32mEditing external/abstraction object: 'else/f2s~' -> 'f2s~'[0m
+      [32mEditing external/abstraction object: 'else/f2s~' -> 'f2s~'[0m
+      [32mCreating modified version of chorus~.pd[0m
+  [32mProcessing object 'chorus~'[0m
+    [32mFound abstractions in library 'else'[0m
+
+    [34mProcessing clone SubPatch 'chorus~.pd[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'cos~'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'del'[0m
+  [32mProcessing object 'switch~'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'change'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object 'mtof~'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object 'expr~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 'value'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'max'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'i'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'pow~'[0m
+  [32mProcessing object 'spigot'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'randpulse~'[0m
+    [32mFound abstractions in library 'else'[0m
+    [32mFound external object 'randpulse~' via prefix lib: else/randpulse~[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'del'[0m
+  [32mProcessing object 'switch~'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'switch~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'int'[0m
+  [32mProcessing object 'change'[0m
+  [32mProcessing object 'spigot'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'mod'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'tabread'[0m
+  [32mProcessing object 'tabread'[0m
+  [32mProcessing object 'tabread'[0m
+  [32mProcessing object 'tabread'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'clone'[0m
+
+    [34mProcessing clone SubPatch 'padvoice_prog1.pd'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'mtof'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'max'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'vcf~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object 'noise~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'expr~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'clip~'[0m
+  [32mProcessing object 'expr~'[0m
+  [32mProcessing object 'expr~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object '*~'[0m
+      [32mCreating modified version of padvoice_prog1.pd[0m
+  [32mProcessing object 'value'[0m
+  [32mProcessing object 'max'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'catch~'[0m
+  [32mProcessing object 'catch~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'array'[0m
+  [32mProcessing object 'array'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'mod'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'delwrite~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'delread4~'[0m
+  [32mProcessing object 'delread4~'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'switch~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'int'[0m
+  [32mProcessing object 'spigot'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'mod'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'mod'[0m
+  [32mProcessing object 'text'[0m
+  [32mProcessing object 'unpack'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'clone'[0m
+
+    [34mProcessing clone SubPatch 'padvoice_prog2_v2.pd'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'del'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'mtof'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'max'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'max'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'clip~'[0m
+  [32mProcessing object 'expr~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'expr~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object '-'[0m
+  [32mProcessing object '*'[0m
+      [32mCreating modified version of padvoice_prog2_v2.pd[0m
+  [32mProcessing object 'value'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'max'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'catch~'[0m
+  [32mProcessing object 'catch~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'text'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'delwrite~'[0m
+  [32mProcessing object 'delread~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'delread~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'change'[0m
+  [32mProcessing object 'stwidth~'[0m
+
+    [34mProcessing clone SubPatch 'stwidth~.pd[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'highpass~'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'highpass~' via prefix lib: else/highpass~[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'highpass~'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'highpass~' via prefix lib: else/highpass~[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'ffdelay~'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'ffdelay~' via prefix lib: else/ffdelay~[0m
+  [32mProcessing object 'ffdelay~'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'ffdelay~' via prefix lib: else/ffdelay~[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object 'cos~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'cos~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '*~'[0m
+      [32mEditing external/abstraction object: 'else/highpass~' -> 'highpass~'[0m
+      [32mEditing external/abstraction object: 'else/highpass~' -> 'highpass~'[0m
+      [32mEditing external/abstraction object: 'else/ffdelay~' -> 'ffdelay~'[0m
+      [32mEditing external/abstraction object: 'else/ffdelay~' -> 'ffdelay~'[0m
+      [32mCreating modified version of stwidth~.pd[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'spigot'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '%'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'mtof~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'clip~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'del'[0m
+  [32mProcessing object 'switch~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'mtof~'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'mtof~'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '%'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'line'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'expr~'[0m
+  [32mProcessing object 'expr~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 'bp~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 'mtof~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'clip~'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'array'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'tabread'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'lowpass~'[0m
+    [32mFound abstractions in library 'else'[0m
+    [32mFound external object 'lowpass~' via prefix lib: else/lowpass~[0m
+  [32mProcessing object 'rampnoise~'[0m
+    [32mFound abstractions in library 'else'[0m
+    [32mFound external object 'rampnoise~' via prefix lib: else/rampnoise~[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'unpack'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'spigot'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '%'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'mtof~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'del'[0m
+  [32mProcessing object 'switch~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'mtof~'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'mtof~'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '%'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'line'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'expr~'[0m
+  [32mProcessing object 'expr~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 'clip~'[0m
+  [32mProcessing object 'bp~'[0m
+  [32mProcessing object 'array'[0m
+  [32mProcessing object 'tabread'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'unpack'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'poly'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'unpack'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '>'[0m
+  [32mProcessing object 'outlet~'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'vline~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'mtof~'[0m
+  [32mProcessing object 'cos~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'sin~'[0m
+    [32mFound external object 'sin~' using lib in declared libs[0m
+  [32mProcessing object 'phasor~'[0m
+  [32mProcessing object 'sig~'[0m
+  [32mProcessing object 'osc~'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '%'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'delread4~'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'delwrite~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'spigot'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'pack'[0m
+  [32mProcessing object 'line~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 'makenote'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'delay'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'switch~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'inlet~'[0m
+  [32mProcessing object 'change'[0m
+  [32mProcessing object 'bang'[0m
+  [32mProcessing object 'tgl'[0m
+  [32mProcessing object 'tabwrite~'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'metro'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'bng'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '=='[0m
+  [32mProcessing object 'pow'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'expr~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'expr~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'random'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object '%'[0m
+  [32mProcessing object '<'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'catch~'[0m
+  [32mProcessing object '+~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'dbtorms'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object '*'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'tabplay~'[0m
+  [32mProcessing object 'throw~'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object 'nbx'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'del'[0m
+  [32mProcessing object 'r~'[0m
+  [32mProcessing object 'hip~'[0m
+  [32mProcessing object 'lop~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '-~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object '*~'[0m
+  [32mProcessing object 'compress~'[0m
+    [32mFound abstractions in library 'else'[0m
+
+    [34mProcessing clone SubPatch 'compress~.pd[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'clip'[0m
+  [32mProcessing object 'unpack'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'max'[0m
+  [32mProcessing object 's~'[0m
+  [32mProcessing object 'args'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'args' via prefix lib: else/args;[0m
+  [32mProcessing object 'db2lin'[0m
+      [32mFound abstractions in library 'else'[0m
+
+      [34mProcessing clone SubPatch 'db2lin.pd[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'outlet'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'outlet'[0m
+  [32mProcessing object 'pow'[0m
+  [32mProcessing object 'swap'[0m
+  [32mProcessing object 'loadbang'[0m
+  [32mProcessing object 'args'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'args' via prefix lib: else/args;[0m
+  [32mProcessing object 'outlet'[0m
+  [32mProcessing object 'sel'[0m
+  [32mProcessing object 'expr'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'spread'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'spread' via prefix lib: else/spread[0m
+  [32mProcessing object 'iterate'[0m
+      [32mFound abstractions in library 'else'[0m
+
+      [34mProcessing clone SubPatch 'iterate.pd[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'outlet'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'v'[0m
+  [32mProcessing object 'until'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object '+'[0m
+  [32mProcessing object 'v'[0m
+  [32mProcessing object 'select'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'until'[0m
+  [32mProcessing object 'f'[0m
+  [32mProcessing object 'v'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object '-'[0m
+  [32mProcessing object '-'[0m
+  [32mProcessing object 'trigger'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'outlet'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'v'[0m
+  [32mProcessing object '>='[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'outlet'[0m
+  [32mProcessing object 'args'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'args' via prefix lib: else/args[0m
+  [32mProcessing object 'lb'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'lb' via prefix lib: else/lb;[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'router'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'router' via prefix lib: else/router[0m
+      [32mEditing external/abstraction object: 'else/args' -> 'args'[0m
+      [32mEditing external/abstraction object: 'else/lb;' -> 'lb;'[0m
+      [32mEditing external/abstraction object: 'else/router' -> 'router'[0m
+      [32mCreating modified version of iterate.pd[0m
+  [32mProcessing object 'group'[0m
+      [32mFound abstractions in library 'else'[0m
+
+      [34mProcessing clone SubPatch 'group.pd[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'outlet'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'until'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'trigger'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 't'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'trigger'[0m
+  [32mProcessing object 'outlet'[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'max'[0m
+  [32mProcessing object 'lb'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'lb' via prefix lib: else/lb[0m
+  [32mProcessing object 'route'[0m
+  [32mProcessing object 'args'[0m
+      [32mFound abstractions in library 'else'[0m
+      [32mFound external object 'args' via prefix lib: else/args;[0m
+  [32mProcessing object 'outlet'[0m
+  [32mProcessing object 's'[0m
+  [32mProcessing object 'r'[0m
+      [32mEditing external/abstraction object: 'else/lb' -> 'lb'[0m
+      [32mEditing external/abstraction object: 'else/args;' -> 'args;'[0m
+      [32mCreating modified version of group.pd[0m
+  [32mProcessing object 't'[0m
+      [32mEditing external/abstraction object: 'else/args;' -> 'args;'[0m
+      [32mEditing external/abstraction object: 'else/spread' -> 'spread'[0m
+      [32mEditing external/abstraction object: 'else/iterate;' -> 'iterate;'[0m
+      [32mEditing external/abstraction object: 'else/group;' -> 'group;'[0m
+      [32mCreating modified version of db2lin.pd[0m
+  [32mProcessing object 'f2s~'[0m
+      [32mFound abstractions in library 'else'[0m
+
+      [34mProcessing clone SubPatch 'f2s~.pd[0m
+  [32mProcessing object 'inlet'[0m
+  [32mProcessing object 'list'[0m
+  [32mProcessing object 'order'[0m

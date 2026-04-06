@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Pd4Web</title>
+        <meta charset="UTF-8" />
+        <link rel="manifest" href="manifest.json" />
+        <meta name="theme-color" content="#000000" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <link rel="apple-touch-icon" href="icon-192.png" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.22.0/dist/tf.min.js"></script>
+        <script src="./pd4web.threads.js"></script>
+        <script src="./pd4web.js"></script>
+        <style>
+            :root { --bg: #fff; --fg: #111; --accent: #1a73e8; --panel: rgba(0,0,0,0.72); }
+            @media (prefers-color-scheme: dark) {
+                :root { --bg: #303030; --fg: #eee; }
+                .pd4web-sound-switch { filter: invert(1); }
+            }
+            *, *::before, *::after { box-sizing: border-box; }
+            body { margin: 0; background: var(--bg); font-family: system-ui, sans-serif; touch-action: pan-x pan-y; }
+
+            /* wasm loader */
+            #wasm-loader {
+                position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%);
+                display: flex; flex-direction: column; align-items: center; gap: 8px;
+                background: rgba(0,0,0,0.08); padding: 16px 20px; border-radius: 10px;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.2); z-index: 1000;
+            }
+            #status { font-size: 12px; color: var(--fg); }
+            #progress { width: 200px; height: 8px; border-radius: 4px; }
+
+            /* pd canvas */
+            .pd4web-sound-switch { display: flex; justify-content: center; align-items: center; width: 32px; height: 32px; margin: 8px auto; }
+            .pd4web-patch-canvas { display: block; margin: 8px auto; border-radius: 6px; box-shadow: 0 2px 12px rgba(0,0,0,0.25); }
+            .pd4web-patch-canvas:focus { outline: 2px solid var(--accent); }
+
+            /* GPS status pill */
+            #gps-pill {
+                position: fixed; bottom: 210px; left: 50%; transform: translateX(-50%);
+                background: var(--panel); color: #fff; font-size: 12px; font-weight: 600;
+                padding: 7px 16px; border-radius: 24px; z-index: 900;
+                pointer-events: none; white-space: nowrap; letter-spacing: 0.3px;
+                transition: background 0.3s;
+            }
+            #gps-pill.inside  { background: rgba(22,160,60,0.88); }
+            #gps-pill.outside { background: rgba(0,0,0,0.72); }
+            #gps-pill.error   { background: rgba(200,40,40,0.88); }
+            #gps-pill.morphing { background: rgba(180,120,0,0.88); }
+
+            /* Debug panel */
+            #debug-panel {
+                position: fixed; bottom: 0; left: 0; right: 0;
+                background: var(--panel); color: #fff;
+                padding: 12px 16px 20px; z-index: 950;
+                display: flex; flex-direction: column; gap: 10px;
+            }
+            #debug-panel h3 {
+                margin: 0; font-size: 12px; letter-spacing: 1px; text-transform: uppercase;
+                color: #aaa; display: flex; justify-content: space-between; align-items: center;
+            }
+            #debug-panel h3 span { color: #fff; font-size: 13px; }
+
+            /* mode toggle */
+            #mode-row { display: flex; gap: 8px; align-items: center; }
+            .mode-btn {
+                flex: 1; padding: 7px 0; border: none; border-radius: 8px;
+                font-size: 12px; font-weight: 700; cursor: pointer; transition: opacity 0.2s;
+            }
+            .mode-btn.active { opacity: 1; }
+            .mode-btn.inactive { opacity: 0.35; }
+            #btn-gps  { background: #1a73e8; color: #fff; }
+            #btn-sim  { background: #f9a825; color: #111; }
+
+            /* zone slider */
+            #slider-row { display: flex; flex-direction: column; gap: 6px; }
+            #slider-row label { font-size: 11px; color: #ccc; display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+            #slider-row label .zone-num { color: #fff; font-size: 16px; font-weight: 800; min-width: 28px; text-align: right; }
+            #slider-row label .morph-badge {
+                font-size: 10px; font-weight: 700; background: #f9a825; color: #111;
+                padding: 2px 7px; border-radius: 10px; opacity: 0; transition: opacity 0.2s;
+            }
+            #slider-row label .morph-badge.visible { opacity: 1; }
+            #zone-slider {
+                width: 100%; -webkit-appearance: none; appearance: none;
+                height: 6px; border-radius: 3px; background: #555; outline: none;
+            }
+            #zone-slider::-webkit-slider-thumb {
+                -webkit-appearance: none; width: 22px; height: 22px;
+                border-radius: 50%; background: #f9a825; cursor: pointer;
+                box-shadow: 0 0 6px rgba(0,0,0,0.5);
+            }
+            #zone-slider:disabled { opacity: 0.3; pointer-events: none; }
+
+            /* morph progress bar */
+            #morph-bar-wrap {
+                height: 4px; background: #333; border-radius: 2px; overflow: hidden;
+                transition: opacity 0.3s; opacity: 0;
+            }
+            #morph-bar-wrap.visible { opacity: 1; }
+            #morph-bar { height: 100%; width: 0%; background: #f9a825; transition: width 0.1s linear; border-radius: 2px; }
+
+            /* zone buttons */
+            #zone-btns { display: flex; flex-wrap: wrap; gap: 4px; }
+            .z-btn {
+                flex: 0 0 calc(14.28% - 4px); padding: 5px 0;
+                border: none; border-radius: 5px; font-size: 10px; font-weight: 700;
+                background: #444; color: #ccc; cursor: pointer; text-align: center;
+                transition: background 0.15s, color 0.15s, opacity 0.2s;
+            }
+            .z-btn:disabled { opacity: 0.25; pointer-events: none; }
+            .z-btn.active { background: #f9a825; color: #111; }
+            .z-btn.pending { background: #1a73e8; color: #fff; }
+            .z-btn.cooling { opacity: 0.45; }
+
+            /* log */
+            #pd-log {
+                font-size: 10px; color: #7f8; background: rgba(0,0,0,0.4);
+                border-radius: 6px; padding: 6px 8px; max-height: 48px; overflow-y: auto;
+                font-family: monospace; white-space: pre-wrap;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="wasm-loader">
+            <span id="status">Loading patch…</span>
+            <progress id="progress" value="0" max="100"></progress>
+        </div>
+
+        <span class="pd4web-sound-switch" id="Pd4WebAudioSwitch"></span>
+        <canvas tabindex="0" class="pd4web-patch-canvas" id="Pd4WebCanvas"></canvas>
+
+        <div id="gps-pill" class="outside">📍 Waiting for GPS…</div>
+
+        <div id="debug-panel">
+            <h3>🎛 Zone Control &nbsp;<span id="debug-mode-label">GPS MODE</span>
+                <span id="track-label" style="font-size:11px;color:#f9a825;margin-left:8px;font-style:italic;"></span>
+            </h3>
+
+            <div id="mode-row">
+                <button class="mode-btn active" id="btn-gps"  onclick="setMode('gps')">📡 Real GPS</button>
+                <button class="mode-btn inactive" id="btn-sim" onclick="setMode('sim')">🎚 Simulate</button>
+            </div>
+
+            <div id="slider-row">
+                <label>
+                    Zone <span class="zone-num" id="zone-label">—</span>
+                    <span class="morph-badge" id="morph-badge">⏳ morphing…</span>
+                </label>
+                <input type="range" id="zone-slider" min="1" max="35" step="1" value="1" disabled
+                       oninput="onSliderInput(this.value)" />
+                <div id="morph-bar-wrap"><div id="morph-bar"></div></div>
+            </div>
+
+            <div id="zone-btns"></div>
+            <div id="pd-log">— patch log —</div>
+
+            <div id="ai-panel" style="display:none;">
+                <h3 style="margin:0;font-size:11px;color:#aaa;text-transform:uppercase;letter-spacing:1px;">
+                    🧠 AI Sound Classifier
+                </h3>
+                <div id="ai-status" style="font-size:11px;color:#7f8;font-family:monospace;"></div>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════ GEOLOCATION + PD BRIDGE ═══════════════════════════════════ -->
+        <!-- Pure geolocation logic lives in geolocation.js (GeoLogic global) -->
+        <script src="./geolocation.js"></script>
+        <script>
+        // Pull shared constants and functions from the GeoLogic module
+        const { ROUTE_LINE, OUTER_BORDER, ZONE_POLYGON,
+                ZONE_BREAKPOINTS, ZONE_FAMILIES, FAMILY_LABELS,
+                distanceToRoute, nearRoute,
+                pointInPolygon, projectOntoPolyline,
+                progressToZone, zoneToTrackLabel, zoneToFamily } = GeoLogic;
+
+        // GPS accuracy threshold — ignore fixes worse than this (metres)
+        const GPS_ACCURACY_THRESHOLD = 50;
+
+        // Morph hold time per family crossing (ms) — matches alexandria_zone_scene_player.pd
+        // morph = max(barMs * 0.75, 1500ms). We use 1600ms as safe default.
+        const MORPH_HOLD_MS = 1600;
+
+        // ── Morph debounce state ──────────────────────────────────────────
+        // Tracks whether the patch is mid-morph and blocks rapid zone changes
+        let morphBusy       = false;
+        let morphTimer      = null;
+        let morphBarTimer   = null;
+        let pendingZone     = null;   // next zone queued while morphing
+        let lastSentZone    = 0;
+
+        function isFamilyChange(fromZone, toZone) {
+            if (fromZone < 1 || fromZone > 35) return true;
+            return ZONE_FAMILIES[fromZone] !== ZONE_FAMILIES[toZone];
+        }
+
+        // Animate the morph progress bar
+        function startMorphBar(durationMs) {
+            const bar = document.getElementById('morph-bar');
+            const wrap = document.getElementById('morph-bar-wrap');
+            const badge = document.getElementById('morph-badge');
+            clearInterval(morphBarTimer);
+            bar.style.width = '0%';
+            wrap.classList.add('visible');
+            badge.classList.add('visible');
+            const steps = 30, interval = durationMs / steps;
+            let step = 0;
+            morphBarTimer = setInterval(() => {
+                step++;
+                bar.style.width = Math.min(100, (step / steps) * 100) + '%';
+                if (step >= steps) {
+                    clearInterval(morphBarTimer);
+                    setTimeout(() => {
+                        wrap.classList.remove('visible');
+                        badge.classList.remove('visible');
+                        bar.style.width = '0%';
+                    }, 200);
+                }
+            }, interval);
+        }
+
+        // Core send — respects morph hold time
+        function sendZone(z, source) {
+            z = Math.min(35, Math.max(1, Math.round(z)));
+            if (!PD4WEB) { log('⚠ pd not ready'); return; }
+
+            // If already morphing, queue the new zone instead of sending immediately
+            if (morphBusy) {
+                pendingZone = z;
+                // Mark button as pending
+                document.querySelectorAll('.z-btn').forEach(b => b.classList.remove('pending'));
+                const pb = document.getElementById('zb-' + z);
+                if (pb) pb.classList.add('pending');
+                log(`⏳ queued zone ${z} (morph in progress) [${source}]`);
+                return;
+            }
+
+            _doSendZone(z, source);
+        }
+
+        function _doSendZone(z, source) {
+            const changing = isFamilyChange(lastSentZone, z);
+            const trackLbl = zoneToTrackLabel(z);
+
+            PD4WEB.sendFloat('zone', z);
+
+            // Expose current zone for the AI classifier bridge
+            window.currentZone = z;
+
+            // Sync UI
+            slider.value = z;
+            zoneLabel.textContent = z;
+            // Update track label in the debug panel header
+            const trackLabelEl = document.getElementById('track-label');
+            if (trackLabelEl) trackLabelEl.textContent = trackLbl;
+            document.querySelectorAll('.z-btn').forEach(b => {
+                b.classList.remove('active');
+                b.classList.remove('pending');
+            });
+            const ab = document.getElementById('zb-' + z);
+            if (ab) ab.classList.add('active');
+
+            lastSentZone = z;
+
+            // Auto-start AI classifier when entering Street Aura (zones 32–35)
+            if (z >= 32 && z <= 35 && window.AiClassifierBridge && !window.AiClassifierBridge.running) {
+                window.AiClassifierBridge.start().catch(function (err) { log('⚠ AI classifier: ' + err.message); });
+                log('🧠 AI classifier activated (Street Aura)');
+            }
+
+            log(`→ zone ${z} · ${trackLbl}${changing ? ' 🔀 family change' : ''}  [${source}]`);
+
+            // If this is a family change, engage morph hold
+            if (changing) {
+                morphBusy = true;
+                pill.className = 'morphing';
+                pill.textContent = `⏳ Morphing to zone ${z}…`;
+                startMorphBar(MORPH_HOLD_MS);
+                clearTimeout(morphTimer);
+                morphTimer = setTimeout(() => {
+                    morphBusy = false;
+                    pill.className = MODE === 'sim' ? 'outside' : (lastSentZone > 0 ? 'inside' : 'outside');
+                    if (MODE === 'sim') {
+                        const lbl = zoneToTrackLabel(lastSentZone);
+                        pill.textContent = `🎚 Zone ${lastSentZone}/35 · ${lbl} — ready`;
+                    }
+                    log(`✅ Morph done (zone ${lastSentZone})`);
+                    // Send queued zone if any
+                    if (pendingZone !== null && pendingZone !== lastSentZone) {
+                        const next = pendingZone;
+                        pendingZone = null;
+                        _doSendZone(next, 'queued');
+                    } else {
+                        pendingZone = null;
+                    }
+                }, MORPH_HOLD_MS);
+            }
+        }
+
+        // ── UI state ──────────────────────────────────────────────────────
+        let MODE      = 'gps';
+        let PD4WEB    = null;
+        let GEO_WATCH = null;
+
+        const pill      = document.getElementById('gps-pill');
+        const slider    = document.getElementById('zone-slider');
+        const zoneLabel = document.getElementById('zone-label');
+        const modeLabel = document.getElementById('debug-mode-label');
+        const pdLog     = document.getElementById('pd-log');
+        const btnGps    = document.getElementById('btn-gps');
+        const btnSim    = document.getElementById('btn-sim');
+
+        // Build zone buttons 1..35
+        const zbtnsContainer = document.getElementById('zone-btns');
+        for (let z = 1; z <= 35; z++) {
+            const b = document.createElement('button');
+            b.className = 'z-btn'; b.id = 'zb-' + z; b.textContent = z; b.disabled = true;
+            b.onclick = () => sendZone(z, 'btn');
+            zbtnsContainer.appendChild(b);
+        }
+
+        function log(msg) {
+            const t = new Date().toLocaleTimeString('en',{hour12:false});
+            pdLog.textContent = `[${t}] ${msg}\n` + pdLog.textContent.slice(0, 500);
+        }
+
+        function onSliderInput(val) {
+            if (MODE !== 'sim') return;
+            sendZone(parseInt(val), 'slider');
+        }
+
+        function setMode(mode) {
+            MODE = mode;
+            if (mode === 'sim') {
+                modeLabel.textContent = 'SIMULATE MODE';
+                btnGps.classList.replace('active','inactive');
+                btnSim.classList.replace('inactive','active');
+                slider.disabled = false;
+                document.querySelectorAll('.z-btn').forEach(b => b.disabled = false);
+                pill.className = 'outside';
+                pill.textContent = '🎚 Simulation — drag slider or tap zone';
+                if (GEO_WATCH !== null) { navigator.geolocation.clearWatch(GEO_WATCH); GEO_WATCH = null; }
+                sendZone(parseInt(slider.value), 'mode-switch');
+                log('🎚 SIMULATE mode — drag slider slowly for clean transitions');
+            } else {
+                modeLabel.textContent = 'GPS MODE';
+                btnSim.classList.replace('active','inactive');
+                btnGps.classList.replace('inactive','active');
+                slider.disabled = true;
+                document.querySelectorAll('.z-btn').forEach(b => { b.disabled = true; b.classList.remove('active','pending'); });
+                pill.className = 'outside'; pill.textContent = '📍 Acquiring GPS…';
+                if (PD4WEB) startGeolocation(PD4WEB);
+                log('📡 GPS mode — real coordinates active');
+            }
+        }
+
+        function startGeolocation(pd) {
+            if (!('geolocation' in navigator)) {
+                pill.className = 'error'; pill.textContent = '⚠️ GPS not available';
+                log('⚠ Geolocation API not available'); return;
+            }
+            if (GEO_WATCH !== null) navigator.geolocation.clearWatch(GEO_WATCH);
+            GEO_WATCH = navigator.geolocation.watchPosition(
+                (pos) => {
+                    if (MODE !== 'gps') return;
+                    const lon = pos.coords.longitude, lat = pos.coords.latitude;
+                    const acc = Math.round(pos.coords.accuracy);
+
+                    // Accuracy gate — ignore imprecise fixes
+                    if (acc > GPS_ACCURACY_THRESHOLD) {
+                        pill.className = 'outside';
+                        pill.textContent = `📡 Weak signal ±${acc}m (need ≤${GPS_ACCURACY_THRESHOLD}m)`;
+                        return;
+                    }
+
+                    const inside = nearRoute(lon, lat);
+                    if (inside) {
+                        const z = progressToZone(projectOntoPolyline(lon, lat, ROUTE_LINE));
+                        const trackLbl = zoneToTrackLabel(z);
+                        sendZone(z, 'gps');
+                        if (!morphBusy) {
+                            pill.className = 'inside';
+                            pill.textContent = `✅ Zone ${z} · ${trackLbl}  ±${acc}m`;
+                        }
+                    } else {
+                        pd.sendFloat('zone', 0);
+                        if (!morphBusy) {
+                            pill.className = 'outside';
+                            pill.textContent = `🚶 Outside route  ±${acc}m`;
+                        }
+                        if (lastSentZone !== 0) { log(`🚶 Outside route  ±${acc}m`); lastSentZone = 0; }
+                    }
+                },
+                (err) => {
+                    pill.className = 'error'; pill.textContent = `⚠️ GPS: ${err.message}`;
+                    log(`⚠ GPS error (${err.code}): ${err.message}`);
+                },
+                { enableHighAccuracy: true, maximumAge: 2000, timeout: 15000 }
+            );
+        }
+
+        // AI classifier status panel — updates every analysis frame
+        window.addEventListener('ai-classifier-update', function(e) {
+            const snap   = e.detail;
+            const panel  = document.getElementById('ai-panel');
+            const status = document.getElementById('ai-status');
+            if (!panel) return;
+            if (window.currentZone >= 32 && window.currentZone <= 35) {
+                panel.style.display = 'block';
+                const cls     = snap.stableClass;
+                const conf    = Math.round((snap.probabilities[cls] || 0) * 100);
+                const grain   = snap.params ? snap.params.grainCount  : '?';
+                const pitch   = snap.params ? snap.params.pitchShift  : '?';
+                const stretch = snap.params ? snap.params.stretchTime : '?';
+                status.textContent = `${cls} (${conf}%) → grain:${grain} pitch:${pitch} stretch:${stretch}`;
+            } else {
+                panel.style.display = 'none';
+            }
+        });
+        </script>
+
+        <!-- Boot pd4web -->
+        <script>
+            const statusElement   = document.getElementById('status');
+            const progressElement = document.getElementById('progress');
+
+            function fetchWithProgress(url) {
+                return new Promise((resolve, reject) => {
+                    const xhr = new XMLHttpRequest();
+                    xhr.open('GET', url, true); xhr.responseType = 'arraybuffer';
+                    xhr.onprogress = (e) => {
+                        if (e.lengthComputable) {
+                            const pct = Math.floor((e.loaded / e.total) * 100);
+                            progressElement.value = pct;
+                            statusElement.textContent = `Loading patch… ${pct}%`;
+                        }
+                    };
+                    xhr.onload = () => xhr.status === 200 ? resolve(xhr.response) : reject(new Error('HTTP ' + xhr.status));
+                    xhr.onerror = () => reject(new Error('Network error'));
+                    xhr.send();
+                });
+            }
+
+            fetchWithProgress('./pd4web.wasm')
+                .then((buf) => Pd4WebModule({ wasmBinary: buf }))
+                .then((Mod) => {
+                    PD4WEB = new Mod.Pd4Web();
+                    window.Pd4WebInstance = PD4WEB;
+                    PD4WEB.openPatch('index.pd', {
+                        canvasId: 'Pd4WebCanvas',
+                        soundToggleId: 'Pd4WebAudioSwitch',
+                    });
+                    document.getElementById('wasm-loader').style.display = 'none';
+                    log('✅ Patch loaded — tap sound button then try Simulate mode');
+                    setMode('gps');
+                    startGeolocation(PD4WEB);
+                })
+                .catch((err) => {
+                    statusElement.textContent = 'Failed to load patch.';
+                    log('❌ ' + err.message);
+                    console.error(err);
+                });
+        </script>
+        <script src="./ai-classifier-bridge.js"></script>
+    </body>
+</html>
