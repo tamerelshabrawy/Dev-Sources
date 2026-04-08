@@ -1,0 +1,11 @@
+# pd4web build artifacts
+.build/
+.tmp/
+Pd4Web/
+
+# Compiled web output
+*.wasm
+*.data
+
+# macOS metadata
+.DS_Store
