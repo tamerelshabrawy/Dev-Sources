@@ -1,0 +1,14 @@
+# pd4web build artifacts — copy these from your pd4web build output
+pd4web.js
+pd4web.wasm
+pd4web.data
+pd4web.threads.js
+
+# Node
+node_modules/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
