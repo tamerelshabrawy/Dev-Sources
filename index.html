@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Alexandria Soundwalk</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="theme-color" content="#1a1a1a" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="icon-192.png" />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- pd4web Emscripten module (copy from your pd4web build output) -->
+    <script src="./pd4web.threads.js"></script>
+    <script src="./pd4web.js"></script>
+</head>
+<body>
+
+<!-- ══ Loading overlay ════════════════════════════════════════════════════ -->
+<div id="loader">
+    <p id="loader-msg">Loading patch…</p>
+    <progress id="loader-progress" value="0" max="100"></progress>
+</div>
+
+<!-- ══ App shell ══════════════════════════════════════════════════════════ -->
+<div id="app">
+
+    <!-- Header -->
+    <header>
+        <h1>🎧 Alexandria Soundwalk</h1>
+        <button id="audio-btn" onclick="toggleAudio()" disabled>▶ Start Audio</button>
+    </header>
+
+    <!-- pd4web canvas (hidden until patch loads) -->
+    <div id="pd-area" style="display:none;">
+        <span class="pd4web-sound-switch" id="Pd4WebAudioSwitch"></span>
+        <canvas tabindex="0" class="pd4web-patch-canvas" id="Pd4WebCanvas"></canvas>
+    </div>
+
+    <!-- GPS status pill -->
+    <div id="gps-status" class="outside">📍 Waiting for GPS…</div>
+
+    <!-- Zone display -->
+    <div id="zone-display">
+        <div id="zone-number">—</div>
+        <div id="zone-info">
+            <div id="zone-name">No zone</div>
+            <div id="zone-track">Start audio and walk the route</div>
+            <div id="progress-bar-wrap">
+                <div id="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mini map -->
+    <div id="map-wrap">
+        <canvas id="map-canvas" width="560" height="280"></canvas>
+        <div id="map-legend">
+            <span class="legend-item"><span class="legend-dot" style="background:#0e7c7b"></span>Track 1</span>
+            <span class="legend-item"><span class="legend-dot" style="background:#f4a261"></span>Transition</span>
+            <span class="legend-item"><span class="legend-dot" style="background:#e63946"></span>Track 2</span>
+            <span class="legend-item"><span class="legend-dot" style="background:#457b9d"></span>Track 3</span>
+            <span class="legend-item"><span class="legend-dot" style="background:#7b2d8e"></span>Track 4</span>
+            <span class="legend-item"><span class="legend-dot" style="background:#fff; border:1px solid #666"></span>You</span>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <section id="controls">
+        <h2>Zone Control &mdash; <span id="mode-label">GPS Mode</span></h2>
+
+        <!-- GPS / Simulate toggle -->
+        <div id="mode-row">
+            <button class="mode-btn active" id="btn-gps" onclick="setMode('gps')">📡 Real GPS</button>
+            <button class="mode-btn inactive" id="btn-sim" onclick="setMode('sim')">🎚 Simulate</button>
+        </div>
+
+        <!-- Manual zone slider (simulate mode) -->
+        <div id="slider-section">
+            <div class="slider-label">
+                Zone <span class="val" id="slider-val">1</span>/35
+            </div>
+            <input type="range" id="zone-slider" min="1" max="35" step="1" value="1"
+                   disabled oninput="onSliderZone(this.value)" />
+        </div>
+
+        <!-- Simulator controls -->
+        <div id="sim-row" style="display:none;">
+            <button id="sim-start-btn" onclick="simStart()">▶ Walk 1→35</button>
+            <button id="sim-stop-btn"  onclick="simStop()" disabled>⏹ Stop</button>
+            <input  id="sim-pace" type="number" value="20" min="1" max="300" title="Seconds per zone" />
+            <label style="font-size:11px;color:var(--fg-dim);">s/zone</label>
+        </div>
+
+        <!-- Zone grid buttons -->
+        <div id="zone-btns"></div>
+
+        <!-- Log -->
+        <div id="log">— patch log —</div>
+    </section>
+
+</div><!-- /#app -->
+
+<!-- ══ GPS zone driver ════════════════════════════════════════════════════ -->
+<script src="./gps-zone-driver.js"></script>
+
+<!-- ══ Walk simulator ════════════════════════════════════════════════════ -->
+<script src="./simulate.js"></script>
+
+<!-- ══ Application logic ═════════════════════════════════════════════════ -->
+<script>
+/* ─────────────────────────────────────────────────────────────────────────
+   State
+   ───────────────────────────────────────────────────────────────────────── */
+let PD4WEB   = null;
+let MODE     = 'gps';
+let audioOn  = false;
+
+/* ─────────────────────────────────────────────────────────────────────────
+   DOM references
+   ───────────────────────────────────────────────────────────────────────── */
+const elGpsStatus  = document.getElementById('gps-status');
+const elZoneNum    = document.getElementById('zone-number');
+const elZoneName   = document.getElementById('zone-name');
+const elZoneTrack  = document.getElementById('zone-track');
+const elProgressBar= document.getElementById('progress-bar');
+const elModeLabel  = document.getElementById('mode-label');
+const elSlider     = document.getElementById('zone-slider');
+const elSliderVal  = document.getElementById('slider-val');
+const elLog        = document.getElementById('log');
+const elAudioBtn   = document.getElementById('audio-btn');
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Logging
+   ───────────────────────────────────────────────────────────────────────── */
+function log(msg) {
+    const t = new Date().toLocaleTimeString('en', { hour12: false });
+    elLog.textContent = `[${t}] ${msg}\n` + elLog.textContent.slice(0, 600);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Zone UI update
+   ───────────────────────────────────────────────────────────────────────── */
+function updateZoneUI(zone, progress, name, track) {
+    elZoneNum.textContent   = zone > 0 ? zone   : '—';
+    elZoneName.textContent  = name  || (zone > 0 ? `Zone ${zone}` : 'Outside route');
+    elZoneTrack.textContent = track || '';
+    elProgressBar.style.width = Math.round(progress * 100) + '%';
+
+    // Slider sync
+    if (zone > 0) {
+        elSlider.value     = zone;
+        elSliderVal.textContent = zone;
+    }
+
+    // Zone button highlight
+    document.querySelectorAll('.z-btn').forEach(b => b.classList.remove('active'));
+    const ab = document.getElementById('zb-' + zone);
+    if (ab) ab.classList.add('active');
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Mode switching
+   ───────────────────────────────────────────────────────────────────────── */
+function setMode(mode) {
+    MODE = mode;
+    const isGps = mode === 'gps';
+    document.getElementById('btn-gps').className = 'mode-btn ' + (isGps  ? 'active' : 'inactive');
+    document.getElementById('btn-sim').className = 'mode-btn ' + (!isGps ? 'active' : 'inactive');
+    elModeLabel.textContent = isGps ? 'GPS Mode' : 'Simulate Mode';
+    elSlider.disabled = isGps;
+    document.getElementById('sim-row').style.display = isGps ? 'none' : 'flex';
+    document.querySelectorAll('.z-btn').forEach(b => { b.disabled = isGps; });
+
+    if (isGps) {
+        WalkSimulator.stop();
+        if (PD4WEB) GpsZoneDriver.startTracking('./zone-map.json');
+        elGpsStatus.className = 'outside';
+        elGpsStatus.textContent = '📍 Acquiring GPS…';
+        log('📡 GPS mode activated');
+    } else {
+        GpsZoneDriver.stopTracking();
+        elGpsStatus.className = 'outside';
+        elGpsStatus.textContent = '🎚 Simulation mode';
+        log('🎚 Simulate mode — drag slider or tap zone buttons');
+    }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   GPS zone driver callbacks
+   ───────────────────────────────────────────────────────────────────────── */
+GpsZoneDriver.onZoneChange(function (zone, progress, name, track) {
+    if (MODE !== 'gps' && zone !== 0) return;    // ignore GPS when simulating
+    updateZoneUI(zone, progress, name, track);
+    if (zone > 0) {
+        elGpsStatus.className = 'inside';
+        elGpsStatus.textContent = `✅ Zone ${zone} · ${name}`;
+    } else {
+        elGpsStatus.className = 'outside';
+        elGpsStatus.textContent = '🚶 Outside route';
+    }
+    drawMap(zone);
+    log(`→ zone ${zone} · ${name}`);
+});
+
+GpsZoneDriver.onStatus(function (msg, type) {
+    if (MODE !== 'gps') return;
+    const cls = { info: 'outside', warn: 'warn', error: 'error', zone: 'inside', outside: 'outside' }[type] || 'outside';
+    elGpsStatus.className = cls;
+    elGpsStatus.textContent = msg;
+    if (type === 'error' || type === 'warn') log('⚠ ' + msg);
+});
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Slider & zone button handlers (simulate mode)
+   ───────────────────────────────────────────────────────────────────────── */
+function onSliderZone(val) {
+    if (MODE !== 'sim') return;
+    const zone = parseInt(val, 10);
+    elSliderVal.textContent = zone;
+    GpsZoneDriver.simulateZone(zone, 0);
+}
+
+function simStart() {
+    if (MODE !== 'sim') return;
+    const pace = parseFloat(document.getElementById('sim-pace').value) || 20;
+    document.getElementById('sim-start-btn').disabled = true;
+    document.getElementById('sim-stop-btn').disabled  = false;
+    WalkSimulator.start({
+        pace: pace * 1000,
+        startZone: parseInt(elSlider.value, 10) || 1,
+        onZone: function (zone, progress) {
+            elSlider.value = zone;
+            elSliderVal.textContent = zone;
+        },
+        onComplete: function () {
+            document.getElementById('sim-start-btn').disabled = false;
+            document.getElementById('sim-stop-btn').disabled  = true;
+            log('✅ Simulation complete');
+        }
+    });
+    log('▶ Walk simulation started');
+}
+
+function simStop() {
+    WalkSimulator.stop();
+    document.getElementById('sim-start-btn').disabled = false;
+    document.getElementById('sim-stop-btn').disabled  = true;
+    log('⏹ Simulation stopped');
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Audio toggle
+   ───────────────────────────────────────────────────────────────────────── */
+function toggleAudio() {
+    if (!PD4WEB) return;
+    audioOn = !audioOn;
+    // pd4web handles the AudioContext via its own sound switch; we just
+    // programmatically click it when the user presses our button.
+    const sw = document.getElementById('Pd4WebAudioSwitch');
+    if (sw) {
+        const btn = sw.querySelector('button, input, span') || sw;
+        btn.click();
+    }
+    elAudioBtn.textContent = audioOn ? '⏹ Stop Audio' : '▶ Start Audio';
+    elAudioBtn.className   = audioOn ? 'playing' : '';
+    log(audioOn ? '🔊 Audio started' : '🔇 Audio stopped');
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Mini-map (canvas)
+   ───────────────────────────────────────────────────────────────────────── */
+const ROUTE_LINE = [
+    [29.9042702,31.1971939],[29.9042697,31.1971939],[29.9041345,31.1974428],
+    [29.9039240,31.1976572],[29.9037191,31.1978710],[29.9035805,31.1980146],
+    [29.9034668,31.1981114],[29.9032732,31.1982327],[29.9030305,31.1984446],
+    [29.9029072,31.1985722],[29.9027810,31.1987394],[29.9026791,31.1988579],
+    [29.9025586,31.1989869],[29.9022687,31.1992511],[29.9019591,31.1995458],
+    [29.9019591,31.1995458],[29.9015999,31.1998636],[29.9013854,31.2000587],
+    [29.9011287,31.2002840],[29.9008607,31.2005171],[29.9005950,31.2007425],
+    [29.9003518,31.2009563],[29.8996133,31.2010997],
+    [29.8995806,31.2014050],[29.8992918,31.2012976],
+    [29.8988268,31.2011214],[29.8985785,31.2010352],
+    [29.8988634,31.2004477],[29.8990220,31.2001435],[29.8991065,31.1999369],
+    [29.8993131,31.1997794],[29.8995214,31.1996210],[29.9000878,31.1984075],
+    [29.9002448,31.1980737],[29.9003473,31.1978637],[29.9004363,31.1976696],
+    [29.9005354,31.1974520],[29.9007290,31.1970330],[29.9008214,31.1968278],
+    [29.9009196,31.1966127],[29.9009838,31.1964567],[29.9010204,31.1963777],
+    [29.9010739,31.1962588],[29.9011093,31.1961634],[29.9011600,31.1960329],
+    [29.9026919,31.1965935],[29.9030252,31.1967192],[29.9032994,31.1968217],
+    [29.9035612,31.1969195],[29.9038177,31.1970196],[29.9040266,31.1970967],
+    [29.9042715,31.1971886]
+];
+
+const ZONE_BREAKPOINTS = [
+    0.0155,0.0310,0.0465,0.0620,0.0775,0.0930,
+    0.1058,0.1185,0.1313,0.1440,
+    0.1592,0.1744,0.1896,0.2048,0.2200,
+    0.2352,0.2504,0.2656,0.2808,0.2960,
+    0.3112,0.3264,0.3416,0.3568,0.3720,
+    0.3860,0.4000,
+    0.4428,0.4855,0.5283,0.5710,
+    0.6782,0.7855,0.8927,1.0000
+];
+
+const ZONE_COLORS = [null,
+    '#0e7c7b','#0e7c7b','#0e7c7b','#0e7c7b','#0e7c7b','#0e7c7b',
+    '#f4a261','#f4a261','#f4a261','#f4a261',
+    '#e63946','#e63946','#e63946','#e63946','#e63946',
+    '#e63946','#e63946','#e63946','#e63946','#e63946',
+    '#e63946','#e63946','#e63946','#e63946','#e63946',
+    '#f4a261','#f4a261',
+    '#457b9d','#457b9d','#457b9d','#457b9d',
+    '#7b2d8e','#7b2d8e','#7b2d8e','#7b2d8e'
+];
+
+let _mapZones = [];
+
+function buildMapCache(w, h) {
+    const lons = ROUTE_LINE.map(c => c[0]);
+    const lats = ROUTE_LINE.map(c => c[1]);
+    const pad  = 18;
+    const lonMin = Math.min(...lons), lonMax = Math.max(...lons);
+    const latMin = Math.min(...lats), latMax = Math.max(...lats);
+
+    function proj(lon, lat) {
+        const x = pad + (lon - lonMin) / (lonMax - lonMin) * (w - 2*pad);
+        const y = h - pad - (lat - latMin) / (latMax - latMin) * (h - 2*pad);
+        return [x, y];
+    }
+
+    // Pre-compute route arc lengths for interpolation
+    const segs = []; let total = 0;
+    for (let i = 0; i < ROUTE_LINE.length - 1; i++) {
+        const dx = ROUTE_LINE[i+1][0] - ROUTE_LINE[i][0];
+        const dy = ROUTE_LINE[i+1][1] - ROUTE_LINE[i][1];
+        const len = Math.sqrt(dx*dx + dy*dy);
+        segs.push(len); total += len;
+    }
+    const cum = [0];
+    for (const s of segs) cum.push(cum[cum.length-1] + s);
+
+    function interpPt(p) {
+        if (p <= 0) return ROUTE_LINE[0];
+        if (p >= 1) return ROUTE_LINE[ROUTE_LINE.length-1];
+        const target = p * total;
+        let lo = 0, hi = cum.length - 2;
+        while (lo < hi) { const mid=(lo+hi)>>1; if (cum[mid+1]<target) lo=mid+1; else hi=mid; }
+        const t = (cum[lo+1] > cum[lo]) ? (target - cum[lo]) / (cum[lo+1] - cum[lo]) : 0;
+        const a = ROUTE_LINE[lo], b = ROUTE_LINE[lo+1];
+        return [a[0]+t*(b[0]-a[0]), a[1]+t*(b[1]-a[1])];
+    }
+
+    // Zone midpoints
+    _mapZones = [];
+    for (let z = 1; z <= 35; z++) {
+        const s  = z === 1 ? 0 : ZONE_BREAKPOINTS[z-2];
+        const e  = ZONE_BREAKPOINTS[z-1];
+        const mid = interpPt((s+e)/2);
+        _mapZones.push({ z, pt: proj(mid[0], mid[1]), color: ZONE_COLORS[z] });
+    }
+
+    return { proj, interpPt, total };
+}
+
+function drawMap(activeZone) {
+    const canvas = document.getElementById('map-canvas');
+    if (!canvas) return;
+    const w = canvas.width, h = canvas.height;
+    const ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, w, h);
+
+    // Background
+    ctx.fillStyle = '#0d1117';
+    ctx.fillRect(0, 0, w, h);
+
+    const { proj } = buildMapCache(w, h);
+
+    // Draw route coloured by zone
+    for (let z = 1; z <= 35; z++) {
+        const s = z === 1 ? 0 : ZONE_BREAKPOINTS[z-2];
+        const e = ZONE_BREAKPOINTS[z-1];
+        const segs2 = []; let tot2 = 0;
+        const cumZ = [0];
+        for (let i = 0; i < ROUTE_LINE.length-1; i++) {
+            const dx = ROUTE_LINE[i+1][0]-ROUTE_LINE[i][0];
+            const dy = ROUTE_LINE[i+1][1]-ROUTE_LINE[i][1];
+            const len = Math.sqrt(dx*dx+dy*dy);
+            segs2.push(len); tot2 += len;
+            cumZ.push(cumZ[cumZ.length-1]+len);
+        }
+        const pts = [];
+        for (let i = 0; i < ROUTE_LINE.length; i++) {
+            const p = tot2 > 0 ? cumZ[i]/tot2 : 0;
+            if (p >= s - 0.001 && p <= e + 0.001) pts.push(proj(ROUTE_LINE[i][0], ROUTE_LINE[i][1]));
+        }
+        if (pts.length < 2) continue;
+        ctx.beginPath();
+        ctx.moveTo(pts[0][0], pts[0][1]);
+        for (let i = 1; i < pts.length; i++) ctx.lineTo(pts[i][0], pts[i][1]);
+        ctx.strokeStyle = z === activeZone ? '#fff' : ZONE_COLORS[z];
+        ctx.lineWidth   = z === activeZone ? 4 : 2;
+        ctx.stroke();
+    }
+
+    // Zone dots
+    for (const zm of _mapZones) {
+        const r = zm.z === activeZone ? 6 : 3;
+        ctx.beginPath();
+        ctx.arc(zm.pt[0], zm.pt[1], r, 0, Math.PI*2);
+        ctx.fillStyle = zm.z === activeZone ? '#fff' : zm.color;
+        ctx.fill();
+        if (zm.z === activeZone) {
+            ctx.font = 'bold 11px sans-serif';
+            ctx.fillStyle = '#fff';
+            ctx.fillText(zm.z, zm.pt[0] + 8, zm.pt[1] + 4);
+        }
+    }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Build zone buttons
+   ───────────────────────────────────────────────────────────────────────── */
+(function buildZoneButtons() {
+    const container = document.getElementById('zone-btns');
+    for (let z = 1; z <= 35; z++) {
+        const b = document.createElement('button');
+        b.className  = 'z-btn';
+        b.id         = 'zb-' + z;
+        b.textContent = z;
+        b.disabled   = true;
+        b.onclick    = () => {
+            if (MODE !== 'sim') return;
+            elSlider.value = z; elSliderVal.textContent = z;
+            GpsZoneDriver.simulateZone(z, 0);
+        };
+        container.appendChild(b);
+    }
+})();
+
+/* ─────────────────────────────────────────────────────────────────────────
+   pd4web boot
+   ───────────────────────────────────────────────────────────────────────── */
+(function bootPd4Web() {
+    const loaderMsg  = document.getElementById('loader-msg');
+    const loaderProg = document.getElementById('loader-progress');
+    const loader     = document.getElementById('loader');
+
+    // Draw the map immediately so there's something to look at
+    drawMap(0);
+
+    function fetchWithProgress(url) {
+        return new Promise((resolve, reject) => {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            xhr.responseType = 'arraybuffer';
+            xhr.onprogress = (e) => {
+                if (e.lengthComputable) {
+                    loaderProg.value = Math.floor(e.loaded / e.total * 100);
+                    loaderMsg.textContent = `Loading patch… ${loaderProg.value}%`;
+                }
+            };
+            xhr.onload  = () => xhr.status === 200 ? resolve(xhr.response) : reject(new Error('HTTP ' + xhr.status));
+            xhr.onerror = () => reject(new Error('Network error'));
+            xhr.send();
+        });
+    }
+
+    if (typeof Pd4WebModule === 'undefined') {
+        loaderMsg.textContent = 'pd4web.js not found — see README.md';
+        log('❌ pd4web.js not found. Copy build files from your pd4web output directory.');
+        return;
+    }
+
+    fetchWithProgress('./pd4web.wasm')
+        .then(buf => Pd4WebModule({ wasmBinary: buf }))
+        .then(Mod => {
+            PD4WEB = new Mod.Pd4Web();
+            window.Pd4Web = PD4WEB;
+            window.Pd4WebInstance = PD4WEB;
+            GpsZoneDriver.setPd4Web(PD4WEB);
+
+            PD4WEB.openPatch('index.pd', {
+                canvasId:      'Pd4WebCanvas',
+                soundToggleId: 'Pd4WebAudioSwitch'
+            });
+
+            // Hide loader, show patch canvas
+            loader.classList.add('hidden');
+            document.getElementById('pd-area').style.display = 'flex';
+            elAudioBtn.disabled = false;
+
+            log('✅ Patch loaded — tap ▶ Start Audio then try GPS or Simulate mode');
+
+            // Start GPS mode
+            setMode('gps');
+        })
+        .catch(err => {
+            loaderMsg.textContent = 'Failed to load patch.';
+            log('❌ ' + err.message);
+            console.error(err);
+        });
+})();
+</script>
+</body>
+</html>

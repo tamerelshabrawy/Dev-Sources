@@ -1,0 +1,389 @@
+{
+  "zones": [
+    {
+      "id": 1,
+      "name": "Safeya Zaghloul — Southern Start",
+      "track": "Track 1",
+      "family": 0,
+      "center": {
+        "lat": 31.1973064,
+        "lng": 29.9042086
+      },
+      "radius": 25
+    },
+    {
+      "id": 2,
+      "name": "Safeya Zaghloul — Hosni Mubarak Sq",
+      "track": "Track 1",
+      "family": 0,
+      "center": {
+        "lat": 31.1975156,
+        "lng": 29.9040631
+      },
+      "radius": 25
+    },
+    {
+      "id": 3,
+      "name": "Safeya Zaghloul — Southern Market",
+      "track": "Track 1",
+      "family": 0,
+      "center": {
+        "lat": 31.1976996,
+        "lng": 29.9038834
+      },
+      "radius": 25
+    },
+    {
+      "id": 4,
+      "name": "Safeya Zaghloul — Central Section",
+      "track": "Track 1",
+      "family": 0,
+      "center": {
+        "lat": 31.1978852,
+        "lng": 29.9037054
+      },
+      "radius": 25
+    },
+    {
+      "id": 5,
+      "name": "Safeya Zaghloul — Mid Street",
+      "track": "Track 1",
+      "family": 0,
+      "center": {
+        "lat": 31.1980647,
+        "lng": 29.9035217
+      },
+      "radius": 25
+    },
+    {
+      "id": 6,
+      "name": "Safeya Zaghloul — Transition South",
+      "track": "Transition",
+      "family": 1,
+      "center": {
+        "lat": 31.1982097,
+        "lng": 29.9033099
+      },
+      "radius": 25
+    },
+    {
+      "id": 7,
+      "name": "Safeya Zaghloul — Transition North",
+      "track": "Transition",
+      "family": 1,
+      "center": {
+        "lat": 31.1983586,
+        "lng": 29.903129
+      },
+      "radius": 25
+    },
+    {
+      "id": 8,
+      "name": "Safeya Zaghloul — Upper Section",
+      "track": "Transition",
+      "family": 1,
+      "center": {
+        "lat": 31.1985027,
+        "lng": 29.9029744
+      },
+      "radius": 25
+    },
+    {
+      "id": 9,
+      "name": "Safeya Zaghloul — Near Corniche",
+      "track": "Transition",
+      "family": 1,
+      "center": {
+        "lat": 31.1986639,
+        "lng": 29.902838
+      },
+      "radius": 25
+    },
+    {
+      "id": 10,
+      "name": "Safeya Zaghloul — Corniche Junction",
+      "track": "Transition",
+      "family": 1,
+      "center": {
+        "lat": 31.198828,
+        "lng": 29.9027048
+      },
+      "radius": 25
+    },
+    {
+      "id": 11,
+      "name": "Upper Safeya — Opening",
+      "track": "Track 2",
+      "family": 2,
+      "center": {
+        "lat": 31.1989974,
+        "lng": 29.9025471
+      },
+      "radius": 25
+    },
+    {
+      "id": 12,
+      "name": "Upper Safeya — Mid North",
+      "track": "Track 2",
+      "family": 2,
+      "center": {
+        "lat": 31.1991672,
+        "lng": 29.9023607
+      },
+      "radius": 25
+    },
+    {
+      "id": 13,
+      "name": "Upper Safeya — Market Row",
+      "track": "Track 2",
+      "family": 2,
+      "center": {
+        "lat": 31.1993391,
+        "lng": 29.9021762
+      },
+      "radius": 25
+    },
+    {
+      "id": 14,
+      "name": "Upper Safeya — Near Seafront",
+      "track": "Track 2",
+      "family": 2,
+      "center": {
+        "lat": 31.199513,
+        "lng": 29.9019936
+      },
+      "radius": 25
+    },
+    {
+      "id": 15,
+      "name": "Upper Safeya — Seafront Approach",
+      "track": "Track 2",
+      "family": 3,
+      "center": {
+        "lat": 31.1996814,
+        "lng": 29.9018059
+      },
+      "radius": 25
+    },
+    {
+      "id": 16,
+      "name": "Upper Safeya — Corniche View",
+      "track": "Track 2",
+      "family": 3,
+      "center": {
+        "lat": 31.1998485,
+        "lng": 29.901617
+      },
+      "radius": 25
+    },
+    {
+      "id": 17,
+      "name": "Upper Safeya — Waterfront",
+      "track": "Track 2",
+      "family": 3,
+      "center": {
+        "lat": 31.2000179,
+        "lng": 29.9014303
+      },
+      "radius": 25
+    },
+    {
+      "id": 18,
+      "name": "Upper Safeya — Corniche Walk",
+      "track": "Track 2",
+      "family": 3,
+      "center": {
+        "lat": 31.200185,
+        "lng": 29.9012414
+      },
+      "radius": 25
+    },
+    {
+      "id": 19,
+      "name": "Upper Safeya — Near Library",
+      "track": "Track 2",
+      "family": 3,
+      "center": {
+        "lat": 31.2003511,
+        "lng": 29.9010516
+      },
+      "radius": 25
+    },
+    {
+      "id": 20,
+      "name": "Upper Safeya — Library District",
+      "track": "Track 2",
+      "family": 4,
+      "center": {
+        "lat": 31.2005165,
+        "lng": 29.9008613
+      },
+      "radius": 25
+    },
+    {
+      "id": 21,
+      "name": "Upper Safeya — Bibliotheca",
+      "track": "Track 2",
+      "family": 4,
+      "center": {
+        "lat": 31.2006797,
+        "lng": 29.900669
+      },
+      "radius": 25
+    },
+    {
+      "id": 22,
+      "name": "Upper Safeya — Bibliotheca Gardens",
+      "track": "Track 2",
+      "family": 4,
+      "center": {
+        "lat": 31.2008449,
+        "lng": 29.9004785
+      },
+      "radius": 25
+    },
+    {
+      "id": 23,
+      "name": "Upper Safeya — West End",
+      "track": "Track 2",
+      "family": 4,
+      "center": {
+        "lat": 31.2009722,
+        "lng": 29.9002699
+      },
+      "radius": 25
+    },
+    {
+      "id": 24,
+      "name": "Upper Safeya — Corner",
+      "track": "Track 2",
+      "family": 4,
+      "center": {
+        "lat": 31.2010203,
+        "lng": 29.9000223
+      },
+      "radius": 25
+    },
+    {
+      "id": 25,
+      "name": "Seafront — Eastern End",
+      "track": "Transition",
+      "family": 5,
+      "center": {
+        "lat": 31.2010683,
+        "lng": 29.8997748
+      },
+      "radius": 25
+    },
+    {
+      "id": 26,
+      "name": "Seafront — Central",
+      "track": "Transition",
+      "family": 5,
+      "center": {
+        "lat": 31.201177,
+        "lng": 29.899605
+      },
+      "radius": 25
+    },
+    {
+      "id": 27,
+      "name": "Seafront / El Naby — Corner",
+      "track": "Transition",
+      "family": 5,
+      "center": {
+        "lat": 31.201404,
+        "lng": 29.8995778
+      },
+      "radius": 25
+    },
+    {
+      "id": 28,
+      "name": "El Naby Danial — Upper Section",
+      "track": "Track 3",
+      "family": 6,
+      "center": {
+        "lat": 31.2012388,
+        "lng": 29.8991366
+      },
+      "radius": 35
+    },
+    {
+      "id": 29,
+      "name": "El Naby Danial — Mid Upper",
+      "track": "Track 3",
+      "family": 6,
+      "center": {
+        "lat": 31.2009316,
+        "lng": 29.8986288
+      },
+      "radius": 28
+    },
+    {
+      "id": 30,
+      "name": "El Naby Danial — Central",
+      "track": "Track 3",
+      "family": 6,
+      "center": {
+        "lat": 31.2002956,
+        "lng": 29.8989427
+      },
+      "radius": 38
+    },
+    {
+      "id": 31,
+      "name": "El Naby Danial — Mid Lower",
+      "track": "Track 3",
+      "family": 6,
+      "center": {
+        "lat": 31.1997463,
+        "lng": 29.8993566
+      },
+      "radius": 36
+    },
+    {
+      "id": 32,
+      "name": "El Naby Danial — Lower Section",
+      "track": "Track 4",
+      "family": 7,
+      "center": {
+        "lat": 31.1986818,
+        "lng": 29.8999598
+      },
+      "radius": 50
+    },
+    {
+      "id": 33,
+      "name": "El Naby Danial — Southern End",
+      "track": "Track 4",
+      "family": 7,
+      "center": {
+        "lat": 31.1970694,
+        "lng": 29.9007122
+      },
+      "radius": 50
+    },
+    {
+      "id": 34,
+      "name": "El Horeya Road — West",
+      "track": "Track 4",
+      "family": 7,
+      "center": {
+        "lat": 31.1962562,
+        "lng": 29.9017702
+      },
+      "radius": 50
+    },
+    {
+      "id": 35,
+      "name": "El Horeya Road — Return East",
+      "track": "Track 4",
+      "family": 7,
+      "center": {
+        "lat": 31.1968738,
+        "lng": 29.903439
+      },
+      "radius": 50
+    }
+  ]
+}
