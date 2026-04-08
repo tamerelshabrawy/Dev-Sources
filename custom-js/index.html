@@ -367,7 +367,14 @@
                     const lon = pos.coords.longitude, lat = pos.coords.latitude;
                     const acc = Math.round(pos.coords.accuracy);
 
-                    // Accuracy gate — ignore imprecise fixes
+                    // Send raw GPS data to Pd — always, regardless of accuracy
+                    pd.sendFloat('gpsLat',     lat);
+                    pd.sendFloat('gpsLon',     lon);
+                    pd.sendFloat('gpsAcc',     acc);
+                    pd.sendFloat('gpsHeading', pos.coords.heading != null ? pos.coords.heading : -1);
+                    pd.sendFloat('gpsSpeed',   pos.coords.speed   != null ? pos.coords.speed   : -1);
+
+                    // Accuracy gate — ignore imprecise fixes for zone mapping
                     if (acc > GPS_ACCURACY_THRESHOLD) {
                         pill.className = 'outside';
                         pill.textContent = `📡 Weak signal ±${acc}m (need ≤${GPS_ACCURACY_THRESHOLD}m)`;
