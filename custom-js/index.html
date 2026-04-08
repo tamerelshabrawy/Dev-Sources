@@ -167,6 +167,8 @@
         <!-- ═══════════════════════════════════ GEOLOCATION + PD BRIDGE ═══════════════════════════════════ -->
         <!-- Pure geolocation logic lives in geolocation.js (GeoLogic global) -->
         <script src="./geolocation.js"></script>
+        <!-- GPS → pd4web bridge: maps device GPS position to zone IDs and sends them to Pd -->
+        <script src="./gps_zone_bridge.js"></script>
         <script>
         // Pull shared constants and functions from the GeoLogic module
         const { ROUTE_LINE, OUTER_BORDER, ZONE_POLYGON,

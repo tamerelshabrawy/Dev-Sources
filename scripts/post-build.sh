@@ -30,6 +30,7 @@ fi
 FILES=(
     "index.html"
     "geolocation.js"
+    "gps_zone_bridge.js"
     "ai-classifier-bridge.js"
 )
 
