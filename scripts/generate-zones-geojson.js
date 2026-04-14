@@ -2,7 +2,7 @@
 /**
  * generate-zones-geojson.js
  * Generates docs/alexandria-soundwalk-zones.geojson from the data in
- * WebPatch 3/geolocation.js — suitable for opening in QGIS, Mapbox,
+ * custom-js/geolocation.js — suitable for opening in QGIS, Mapbox,
  * geojson.io, Google Earth, or any GIS tool.
  *
  * Features generated:
@@ -21,7 +21,7 @@ const {
     ZONE_BREAKPOINTS,
     ZONE_FAMILIES,
     FAMILY_LABELS
-} = require(path.join(__dirname, '..', 'WebPatch 3', 'geolocation.js'));
+} = require(path.join(__dirname, '..', 'custom-js', 'geolocation.js'));
 
 /* ── Colour map (track section → hex colour) ──────────────────────────── */
 const SECTION_COLORS = {

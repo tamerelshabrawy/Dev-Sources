@@ -1,0 +1,13 @@
+# pd4web build artifacts
+Pd4Web/
+.build/
+.tmp/
+
+# pd4web patched copies of abstractions (generated during build)
+*_patched.pd
+
+# macOS
+.DS_Store
+
+# Backup files created by sed -i.bak
+*.bak
